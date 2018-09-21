@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class Risk 
- { 
- 
- }
+class Risk 
+{
+   public function __construct()
+   {
+   } 
+}

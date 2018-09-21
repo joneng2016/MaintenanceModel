@@ -1,8 +1,16 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class Entity 
- { 
- 
- }
+class Entity 
+{
+	protected $name
+   public function __construct($name)
+   {
+		$this->name = $name;
+	}	
+	public function hasName()
+	{
+		return $this->name;
+	}
+}

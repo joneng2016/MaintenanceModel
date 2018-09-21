@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class GroupYellow 
- { 
- 
- }
+class GroupYellow 
+{
+   public function __construct()
+   {
+   } 
+}

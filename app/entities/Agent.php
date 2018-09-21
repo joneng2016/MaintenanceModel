@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class Agent extends Entity 
- { 
- 
- }
+class Agent 
+{
+   public function __construct()
+   {
+   } 
+}

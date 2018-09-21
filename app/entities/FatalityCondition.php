@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class FatalityCondition 
- { 
- 
- }
+class FatalityCondition 
+{
+   public function __construct()
+   {
+   } 
+}

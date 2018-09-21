@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class Goal 
- { 
- 
- }
+class Goal 
+{
+   public function __construct()
+   {
+   } 
+}

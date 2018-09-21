@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class Probability 
- { 
- 
- }
+class Probability 
+{
+   public function __construct()
+   {
+   } 
+}

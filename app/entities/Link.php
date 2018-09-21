@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class Link 
- { 
- 
- }
+class Link 
+{
+   public function __construct()
+   {
+   } 
+}

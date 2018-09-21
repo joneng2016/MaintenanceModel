@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class DeonticRelation 
- { 
- 
- }
+class DeonticRelation 
+{
+   public function __construct()
+   {
+   } 
+}

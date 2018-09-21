@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class Schema 
- { 
- 
- }
+class Schema 
+{
+   public function __construct()
+   {
+   } 
+}

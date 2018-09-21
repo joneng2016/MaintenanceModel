@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class Obligation 
- { 
- 
- }
+class Obligation 
+{
+   public function __construct()
+   {
+   } 
+}

@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class Type 
- { 
- 
- }
+class Type 
+{
+   public function __construct()
+   {
+   } 
+}

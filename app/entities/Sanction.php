@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class Sanction 
- { 
- 
- }
+class Sanction 
+{
+   public function __construct()
+   {
+   } 
+}

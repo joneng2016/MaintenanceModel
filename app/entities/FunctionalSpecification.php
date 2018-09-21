@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class FunctionalSpecification 
- { 
- 
- }
+class FunctionalSpecification 
+{
+   public function __construct()
+   {
+   } 
+}

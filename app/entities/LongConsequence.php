@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class LongConsequence 
- { 
- 
- }
+class LongConsequence 
+{
+   public function __construct()
+   {
+   } 
+}

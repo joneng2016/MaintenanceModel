@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class DeonticSpecification 
- { 
- 
- }
+class DeonticSpecification 
+{
+   public function __construct()
+   {
+   } 
+}

@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class Organization 
- { 
- 
- }
+class Organization 
+{
+   public function __construct()
+   {
+   } 
+}

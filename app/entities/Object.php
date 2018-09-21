@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class Object extends Artefact 
- { 
- 
- }
+class Object 
+{
+   public function __construct()
+   {
+   } 
+}

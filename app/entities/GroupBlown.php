@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class GroupBlown 
- { 
- 
- }
+class GroupBlown 
+{
+   public function __construct()
+   {
+   } 
+}

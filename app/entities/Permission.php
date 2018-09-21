@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class Permission 
- { 
- 
- }
+class Permission 
+{
+   public function __construct()
+   {
+   } 
+}

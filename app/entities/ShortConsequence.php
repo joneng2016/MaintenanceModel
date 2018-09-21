@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class ShortConsequence 
- { 
- 
- }
+class ShortConsequence 
+{
+   public function __construct()
+   {
+   } 
+}

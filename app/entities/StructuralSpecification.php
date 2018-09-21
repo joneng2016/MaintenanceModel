@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class StructuralSpecification 
- { 
- 
- }
+class StructuralSpecification 
+{
+   public function __construct()
+   {
+   } 
+}

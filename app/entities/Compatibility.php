@@ -1,8 +1,10 @@
 <?php 
  
- namespace App\Entity; 
+namespace App\Entity; 
  
- class Compatibility 
- { 
- 
- }
+class Compatibility 
+{
+   public function __construct()
+   {
+   } 
+}
