@@ -12,7 +12,8 @@
 		"psr-4":
 		{
 			"App\\Entities\\": "app/entities/",
-			"App\\Command\\": "app/command/"
+			"App\\Command\\": "app/command/",
+			"App\\Ontology\\": "app/ontology/"
 		}
 	}
 }

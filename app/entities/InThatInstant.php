@@ -1,18 +1,13 @@
 <?php 
  
-namespace App\Entity; 
+namespace App\Entities; 
  
 class InThatInstant 
-{
-	private $entity;
-	private $situation = null;
-	private $position_x = null;
-	private $position_y = null;
-	private $position_z = null;
-   public function __construct(Entity $entity)
-   {
+{	
+    public function __construct(Entity $entity)
+    {
 		$this->entity = $entity;
-   } 
+    } 
 	public function loadSituation($situation)
 	{
 		$this->situaiton = $situation;

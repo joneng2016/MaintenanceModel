@@ -1,10 +1,15 @@
 <?php 
  
-namespace App\Entity; 
+namespace App\Entities;  
  
 class DeonticSpecification 
 {
-   public function __construct()
+   public function __construct($permission)
    {
+		$this->permission = $permission;
    } 
+	public function hasPermission()
+	{
+		return $this->permission;
+	}
 }

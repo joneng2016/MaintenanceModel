@@ -1,10 +1,11 @@
 <?php 
  
-namespace App\Entity; 
+namespace App\Entities; 
  
-class Artefact 
+class Artefact extends Entity
 {
    public function __construct()
    {
+
    } 
 }

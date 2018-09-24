@@ -1,10 +1,14 @@
 <?php 
  
-namespace App\Entity; 
+namespace App\Entities; 
  
-class Agent 
+class Agent extends Entity
 {
-   public function __construct()
-   {
-   } 
+	public function changeRole($role){
+		$this->role = $role;
+	}
+	public function hasRole()
+	{
+		return $this->role;
+	}
 }

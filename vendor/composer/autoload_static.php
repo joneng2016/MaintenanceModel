@@ -9,12 +9,17 @@ class ComposerStaticInit292cbac91126b0fda6fc19a5af0dafd5
     public static $prefixLengthsPsr4 = array (
         'A' => 
         array (
+            'App\\Ontology\\' => 13,
             'App\\Entities\\' => 13,
             'App\\Command\\' => 12,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'App\\Ontology\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/ontology',
+        ),
         'App\\Entities\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/entities',

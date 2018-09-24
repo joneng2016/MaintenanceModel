@@ -1,12 +1,13 @@
 <?php 
  
-namespace App\Entity; 
+namespace App\Entities; 
  
 class Entity 
 {
-	protected $name
-   public function __construct($name)
-   {
+	protected $name;
+
+   	public function __construct($name)
+   	{
 		$this->name = $name;
 	}	
 	public function hasName()

@@ -1,8 +1,8 @@
 <?php 
  
-namespace App\Entity; 
+namespace App\Entities; 
  
-class Tool 
+class Tool extends Artefact
 {
    public function __construct()
    {

@@ -1,16 +1,9 @@
 <?php 
  
-namespace App\Entity; 
+namespace App\Entities;  
  
 class Condition 
 {
-	private $relationToolObject[];
-	private $relationAgentTool[];
-	private $inThatInstat[];
-	private $agent[];
-	private $object[];
-	private $tool[];
-	private $sanction;
 
 	public function hasRelationToolObject()
 	{
@@ -36,25 +29,29 @@ class Condition
 	{
 		return $this->sanction;
 	}
-	public function loadRelationToolObject($relationToolObject[])
+	public function loadRelationToolObject($relationToolObject)
 	{
 		$this->relationToolObject = $relationToolObject;
 	}
-	public function loadRelationAgentTool($relationAgentTool[])
+	public function loadRelationAgentTool($relationAgentTool)
 	{
 		$this->relaitonAgentTool = $relationAgentTool;
 	}
-	public function loadInThatInstant($inThatInstant[])
+	public function loadInThatInstant($inThatInstant)
 	{
 		$this->inThatInstant = $inThatInstant;
 	}
-	public function loadAgent($agent[])
+	public function loadAgent($agent)
 	{
 		$this->agent = $agent;
 	}
-	public function loadTool($tool[])
+	public function loadTool($tool)
 	{
 		$this->tool = $tool;
+	}
+	public function loadObject($object)
+	{
+		$this->object = $object;
 	}
 	public function loadSanction()
 	{
