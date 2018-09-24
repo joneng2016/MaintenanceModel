@@ -40,6 +40,6 @@ class MaintenanceLiveLine
 		$objectPorcaConector = new ObjectMaintenance('porca_do_conector');
 		$objectPorcaIsolador = new ObjectMaintenance('porca_do_isolador');
 
-
+		
 	}
 }
