@@ -4,7 +4,10 @@ namespace App\Entities;
  
 class Condition 
 {
-
+	public function hasDescription()
+	{
+		return $this->description;
+	}	
 	public function hasRelationToolObject()
 	{
 		return $this->relationToolObject;
@@ -28,6 +31,10 @@ class Condition
 	public function hasSanction()
 	{
 		return $this->sanction;
+	}
+	public function loadDescription($description)
+	{
+		$this->description = $description;
 	}
 	public function loadRelationToolObject($relationToolObject)
 	{

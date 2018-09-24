@@ -1,0 +1,82 @@
+<?php 
+ 
+namespace App\Ontology; 
+
+use App\Entities\Agent;
+use App\Entities\Tool;
+use App\Entities\ObjectMaintenance;
+use App\Entities\InThatInstant;
+use App\Entities\Condition;
+use App\Entities\Goal;
+
+class MaintenanceLiveLine
+{
+	public function running()
+	{
+
+		$roleSupervisor = new Role('supervisor');
+		$roleObservador = new Role('observador');
+		$roleExecutor01 = new Role('executor01');
+		$roleExecutor02 = new Role('executor01');
+		$roleExecutor03 = new Role('executor01');
+		$roleExecutor04 = new Role('executor01');
+		$roleExecutor05 = new Role('executor01');
+		$roleExecutor06 = new Role('executor01');
+
+		$agente01 = new Agent('agente01');
+		$agente01->changeRole($roleSupervisor)
+		
+		$agente02 = new Agent('agente02');
+		$agente02->chageRole($roleObservador);
+		
+		$agente03 = new Agent('agente03');
+		$agente03->changeRole($roleExecutor01);
+		
+		$agente04 = new Agent('agente04');
+		$agente04->changeRole($roleExecutor02);
+		
+		$agente05 = new Agent('agente05');
+		$agente05->changeRole($roleExecutor03);
+		
+		$agente06 = new Agent('agente06');
+		$agente06->changeRole($roleExecutor04);
+		
+		$agente07 = new Agent('agente07');
+		$agente07->changeRole($roleExecutor05);
+		
+		$agente08 = new Agent('agente08');
+		$agente08->changeRole($roleExecutor06);
+
+
+		$toolColarSela = new Tool('colar_sela');
+		$toolChaveCatraca = new Tool('chave_catraca');		
+		$toolBastaoGarra = new Tool('bastao_garra');
+		$toolEstropo = new Tool('estropo');
+		$toolBastaoUniversal = new Tool('bastao_universal');
+		$toolCarretilha = new Tool('carretilha');
+		$toolCavalete = new Tool('cavalete');		
+		$toolBastaoOlhaoCorda = new Tool('bastao_olhao_corda');
+		$toolLona = new Tool('lona');
+
+		$objectPedestaPoste = new ObjectMaintenance('pedestal_poste');		
+		$objectEspina = new ObjectMaintenance('espina');
+		$objectCondutor = new ObjectMaintenance('condutor');
+		$objectCorda = new ObjectMaintenance('corda');
+		$objectIsoladorDanificado = new ObjectMaintenance('isolador_danificado');
+		$objectIsoladorNovo = new ObjectMaintenance('isolador_novo');
+		$objectParafuso = new ObjectMaintenance('parafuso');
+		$objectConector = new ObjectMaintenance('conector');
+		$objectPorcaConector = new ObjectMaintenance('porca_do_conector');
+		$objectPorcaDoIsolador = new ObjectMaintenance('porca_do_isolador');
+
+		$instantAnalisePreliminar = new InThatInstant([$agente01,$agente02,$agente03,$agente04,$agente05,$agente06,$agente07,$agente08]);
+
+
+		$conditionAnaliePreliminar = new Condition();
+		$conditionAnaliePreliminar->loadInThatInstant($instantAnalisePreliminar);
+		$conditionAnaliePreliminar->loadDescription('Fazer Análise de todos os possíveis riscos que podem ocorrer durante a execução das atividades');
+
+		$goalAnalizePreliminar = new Goal($conditionAnaliePreliminar,1,1);
+		
+	}
+}

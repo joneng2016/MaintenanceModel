@@ -4,7 +4,7 @@ namespace App\Entities;
  
 class InThatInstant 
 {	
-    public function __construct(Entity $entity)
+    public function __construct($entity)
     {
 		$this->entity = $entity;
     } 
