@@ -8,5 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Ontology\\' => array($baseDir . '/app/ontology'),
     'App\\Entities\\' => array($baseDir . '/app/entities'),
+    'App\\DB\\' => array($baseDir . '/app/database'),
     'App\\Command\\' => array($baseDir . '/app/command'),
 );

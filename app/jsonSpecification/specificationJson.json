@@ -1,82 +1,3632 @@
-<?php 
- 
-namespace App\Ontology; 
+  {
+    "gestao": {
+    "grupo": [
+      {
+      "nome": "executores",
+      "funcao": [
+        {
+        "nome": "executor01",
+        "min": 1,
+        "max": 1,
+        "obrigacao": {
+          "missoes": [
+          {
+            "missao": "missao0"
+          },
+          {
+            "missao": "missao01-01"
+          },
+          {
+            "missao": "missao02"
+          },
+          {
+            "missao": "missao03"
+          },
+          {
+            "missao": "missao07"
+          },
+          {
+            "missao": "missao08"
+          },
+          {
+            "missao": "missao09"
+          },
+          {
+            "missao": "missao11"
+          }
+          ],
+          "ferramentas": [
+          {
+            "ferramenta": "cone"
+          },
+          {
+            "ferramenta": "fita"
+          },
+          {
+            "ferramenta": "corda"
+          },
+          {
+            "ferramenta": "carretilha"
+          },
+          {
+            "ferramenta": "bastão universal"
+          },
+          {
+            "ferramenta": "sela"
+          },
+          {
+            "ferramenta": "bastão garra"
+          },
+          {
+            "ferramenta": "colar"
+          },
+          {
+            "ferramenta": "estopo"
+          }
+          ],
+          "seguranca": {
+          "equipamentos de protecao individual": [
+            {
+            "epi": "capacete"
+            },
+            {
+            "epi": "uniforme anti-chama"
+            },
+            {
+            "epi": "luva"
+            },
+            {
+            "epi": "óculos"
+            }
+          ],
+          "protecoes coletiva": [
+            {
+            "protecao coletiva": "Medição e Monitoramento"
+            },
+            {
+            "protecao coletiva": "Distância e Segurança"
+            },
+            {
+            "protecao coletiva": "Analise Preliminar de Riscos - APR"
+            },
+            {
+            "protecao coletiva": "Interrupção das Atividades"
+            }
+          ],
+          "movimentos seguros": [
+            {
+            "movimento": "andar na subestação com as mãos para baixo e vem próximo ao corpo"
+            },
+            {
+            "movimento": "respeitar as distâncias seguras em relação aos equipamentos e estruturas energizadas"
+            },
+            {
+            "movimento": "evitar passos espaçados dentro da subestação"
+            },
+            {
+            "movimento": "manter posicionado sobre a brita"
+            }
+          ],
+          "emergencia": {
+            "tecnicas": [
+            {
+              "tecnica": "Todos os integrantes da equipe deverão possuir treinamento em primeiros socorros"
+            },
+            {
+              "tecnica": "Todos os integrantes da equipe deverão possuir treinameto para Resgates em Ambientes Verticais"
+            },
+            {
+              "tecnica": "A equipe deverá ter à disposição um conjunto completo de Resgate em Ambiemtes Verticais, que deverá estar localizado estrategicamente para sua pronta utilização, inclusive com os dispositivos instalados previamente, caso necessário"
+            },
+                    {
+                      "tecnica": "Deverá ser identificado entre os integrantes da equipe um trabalhador que conhece na região rotas mais rápidas para Hospitais de Referência. Este trabalhador deverá estar instalado desde o início da atividade"
+                    },
+                    {
+                      "tecnica": "Em caso de necessidade, o resgate deverá ser realizado seguindo procedimentos de LV uma vez que a região energizada não estará aterrada. Havendo necessidade, deverá ser realizadoo aterramento dos circuitos envolvidos"
+                    },
+                    {
+                      "tecnica": "Posicionar os veículos estrategicamente para melhor execução do serviço. Em locais onde não houver ou não for possível o acesso do socorro especializado, pelo menos um veículo deve estar preparado para transportar vítimas de possíveis acidentes"
+                    },
+                    {
+                      "tecnica": "Verificar a possibilidade de que todos os acessos ao local da atividade estejam desimpedido"
+                    },
+                    {
+                      "tecnica": "Realizar reuniões técnicas com todos os envolvidos no trabalho a ser executado, repassando todos os pontos que foram definidos no planejamento da atividade"
+                    }
+                  ],
+                  "senha interrupcao da operação": {
+                    "descricao": "trata-se de uma senha que implica interrupção imediata da operação, deve ser usada quando um eletricista está sendo eletrecutado. O supervisor da equipe deve telefonar para a operação e informar a senha"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "nome": "executor02",
+            "min": 1,
+            "max": 1,
+            "obrigacao": {
+              "ferramenta": [
+                {
+                  "ferramenta": "cone"
+                },
+                {
+                  "ferramenta": "fita"
+                },
+                {
+                  "ferramenta": "corda"
+                },
+                {
+                  "ferramenta": "carretilha"
+                },
+                {
+                  "ferramenta": "bastão universal"
+                },
+                {
+                  "ferramenta": "sela"
+                },
+                {
+                  "ferramenta": "bastão garra"
+                },
+                {
+                  "ferramenta": "colar"
+                },
+                {
+                  "ferramenta": "estopo"
+                }
+              ],
+              "missoes": [
+                {
+                  "missao": "missao0"
+                },
+                {
+                  "missao": "missao01-06"
+                },
+                {
+                  "missao": "missao01-01"
+                },
+                {
+                  "missao": "missao02"
+                },
+                {
+                  "missao": "missao03"
+                },
+                {
+                  "missao": "missao07"
+                },
+                {
+                  "missao": "missao08"
+                },
+                {
+                  "missao": "missao09"
+                },
+                {
+                  "missao": "missao11"
+                }
+              ]
+            }
+          },
+          {
+            "nome": "executor03",
+            "min": 1,
+            "max": 1,
+            "obrigacao": {
+              "ferramenta": [
+                {
+                  "ferramenta": "cone"
+                },
+                {
+                  "ferramenta": "fita"
+                },
+                {
+                  "ferramenta": "corda"
+                },
+                {
+                  "ferramenta": "bastão universal"
+                },
+                {
+                  "ferramenta": "sela"
+                },
+                {
+                  "ferramenta": "carretilha"
+                },
+                {
+                  "ferramenta": "bastão garra"
+                },
+                {
+                  "ferramenta": "colar"
+                },
+                {
+                  "ferramenta": "estopo"
+                }
+              ],
+              "missoes": [
+                {
+                  "missao": "missao0"
+                },
+                {
+                  "missao": "missao01-01"
+                },
+                {
+                  "missao": "missao01-06"
+                },
+                {
+                  "missao": "missao02"
+                },
+                {
+                  "missao": "missao03"
+                },
+                {
+                  "missao": "missao04"
+                },
+                {
+                  "missao": "missao05"
+                },
+                {
+                  "missao": "missao08"
+                },
+                {
+                  "missao": "missao09"
+                },
+                {
+                  "missao": "missao11"
+                }
+              ]
+            }
+          },
+          {
+            "nome": "executor04",
+            "min": 1,
+            "max": 1,
+            "obrigacao": {
+              "ferramenta": [
+                {
+                  "ferramenta": "corda"
+                },
+                {
+                  "ferramenta": "carretilha"
+                },
+                {
+                  "ferramenta": "bastão universal"
+                },
+                {
+                  "ferramenta": "sela"
+                },
+                {
+                  "ferramenta": "bastão garra"
+                },
+                {
+                  "ferramenta": "colar"
+                },
+                {
+                  "ferramenta": "estopo"
+                }
+              ],
+              "missoes": [
+                {
+                  "missao": "missao0"
+                },
+                {
+                  "missao": "missao01-02"
+                },
+                {
+                  "missao": "missao02"
+                },
+                {
+                  "missao": "missao03"
+                },
+                {
+                  "missao": "missao04"
+                },
+                {
+                  "missao": "missao05"
+                },
+                {
+                  "missao": "missao08"
+                },
+                {
+                  "missao": "missao09"
+                },
+                {
+                  "missao": "missao11"
+                }
+              ]
+            }
+          },
+          {
+            "nome": "executor05",
+            "min": 1,
+            "max": 1,
+            "obrigacao": {
+              "ferramenta": [
+                {
+                  "ferramenta": "corda"
+                },
+                {
+                  "ferramenta": "bastão universal"
+                },
+                {
+                  "ferramenta": "sela"
+                },
+                {
+                  "ferramenta": "chave catraca"
+                },
+                {
+                  "ferramenta": "colar"
+                },
+                {
+                  "ferramenta": "estopo"
+                }
+              ],
+              "missoes": [
+                {
+                  "missao": "missao0"
+                },
+                {
+                  "missao": "missao01-03"
+                },
+                {
+                  "missao": "missao02"
+                },
+                {
+                  "missao": "missao04"
+                },
+                {
+                  "missao": "missao05"
+                },
+                {
+                  "missao": "missao08"
+                },
+                {
+                  "missao": "missao09"
+                },
+                {
+                  "missao": "missao11"
+                }
+              ],
+              "seguranca": {
+                "equipamentos de protecao individual": [
+                  {
+                    "epi": "capacete"
+                  },
+                  {
+                    "epi": "uniforme anti-chama"
+                  },
+                  {
+                    "epi": "luva"
+                  },
+                  {
+                    "epi": "óculos"
+                  }
+                ],
+                "protecoes coletiva": [
+                  {
+                    "protecao coletiva": "Medição e Monitoramento"
+                  },
+                  {
+                    "protecao coletiva": "Distância e Segurança"
+                  },
+                  {
+                    "protecao coletiva": "Análise Preliminar de Riscos - APR"
+                  },
+                  {
+                    "protecao coletiva": "Interrupção das Atividades"
+                  }
+                ],
+                "movimentos seguros": [
+                  {
+                    "movimento": "andar na subestação com as mãos para baixo e vem próximo ao corpo"
+                  },
+                  {
+                    "movimento": "respeitar as distâncias seguras em relação aos equipamentos e estruturas energizadas"
+                  },
+                  {
+                    "movimento": "evitar passos espaçados dentro da subestação"
+                  },
+                  {
+                    "movimento": "manter posicionado sobre a brita"
+                  }
+                ],
+                "emergencia": {
+                  "tecnicas": [
+                    {
+                      "tecnica": "Todos os integrantes da equipe deverão possuir treinamento em primeiros socorros"
+                    },
+                    {
+                      "tecnica": "Todos os integrantes da equipe deverão possuir treinameto para Resgates em Ambientes Verticais"
+                    },
+                    {
+                      "tecnica": "A equipe deverá ter à disposição um conjunto completo de Resgate em Ambiemtes Verticais, que deverá estar localizado estrategicamente para sua pronta utilização, inclusive com os dispositivos instalados previamente, caso necessário"
+                    },
+                    {
+                      "tecnica": "Deverá ser identificado entre os integrantes da equipe um trabalhador que conhece na região rotas mais rápidas para Hospitais de Referência. Este trabalhador deverá estar instalado desde o início da atividade"
+                    },
+                    {
+                      "tecnica": "Em caso de necessidade, o resgate deverá ser realizado seguindo procedimentos de LV uma vez que a região energizada não estará aterrada. Havendo necessidade, deverá ser realizadoo aterramento dos circuitos envolvidos"
+                    },
+                    {
+                      "tecnica": "Posicionar os veículos estrategicamente para melhor execução do serviço. Em locais onde não houver ou não for possível o acesso do socorro especializado, pelo menos um veículo deve estar preparado para transportar vítimas de possíveis acidentes"
+                    },
+                    {
+                      "tecnica": "Verificar a possibilidade de que todos os acessos ao local da atividade estejam desimpedido"
+                    },
+                    {
+                      "tecnica": "Realizar reuniões técnicas com todos os envolvidos no trabalho a ser executado, repassando todos os pontos que foram definidos no planejamento da atividade"
+                    }
+                  ],
+                  "senha interrupcao da operação": {
+                    "descricao": "trata-se de uma senha que implica interrupção imediata da operação, deve ser usada quando um eletricista está sendo eletrecutado. O supervisor da equipe deve telefonar para a operação e informar a senha"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "nome": "executor06",
+            "min": 1,
+            "max": 1,
+            "obrigacao": {
+              "ferramenta": [
+                {
+                  "ferramenta": "testador de corrente de fulga"
+                },
+                {
+                  "ferramenta": "corda"
+                },
+                {
+                  "ferramenta": "carretilha"
+                },
+                {
+                  "ferramenta": "chave catraca"
+                },
+                {
+                  "ferramenta": "bastão universal"
+                },
+                {
+                  "ferramenta": "bastão garra"
+                },
+                {
+                  "ferramenta": "estopo"
+                }
+              ],
+              "missoes": [
+                {
+                  "missao": "missao0"
+                },
+                {
+                  "missao": "missao01-4"
+                },
+                {
+                  "missao": "missao02"
+                },
+                {
+                  "missao": "missao06"
+                },
+                {
+                  "missao": "missao07"
+                },
+                {
+                  "missao": "missao08"
+                },
+                {
+                  "missao": "missao09"
+                },
+                {
+                  "missao": "missao11"
+                }
+              ],
+              "seguranca": {
+                "equipamentos de protecao individual": [
+                  {
+                    "epi": "capacete"
+                  },
+                  {
+                    "epi": "uniforme anti-chama"
+                  },
+                  {
+                    "epi": "luva"
+                  },
+                  {
+                    "epi": "óculos"
+                  }
+                ],
+                "protecoes coletiva": [
+                  {
+                    "protecao coletiva": "Medição e Monitoramento"
+                  },
+                  {
+                    "protecao coletiva": "Distancia e Seguranca"
+                  },
+                  {
+                    "protecao coletiva": "Análise Preliminar de Riscos - APR"
+                  },
+                  {
+                    "protecao coletiva": "Interrupção das Atividades"
+                  }
+                ],
+                "movimentos seguros": [
+                  {
+                    "movimento": "andar na subestação com as mãos para baixo e vem próximo ao corpo"
+                  },
+                  {
+                    "movimento": "respeitar as distâncias seguras em relação aos equipamentos e estruturas energizadas"
+                  },
+                  {
+                    "movimento": "evitar passos espaçados dentro da subestação"
+                  },
+                  {
+                    "movimento": "manter posicionado sobre a brita"
+                  }
+                ],
+                "emergencia": {
+                  "tecnicas": [
+                    {
+                      "tecnica": "Todos os integrantes da equipe deverão possuir treinamento em primeiros socorros"
+                    },
+                    {
+                      "tecnica": "Todos os integrantes da equipe deverão possuir treinameto para Resgates em Ambientes Verticais"
+                    },
+                    {
+                      "tecnica": "A equipe deverá ter à disposição um conjunto completo de Resgate em Ambiemtes Verticais, que deverá estar localizado estrategicamente para sua pronta utilização, inclusive com os dispositivos instalados previamente, caso necessário"
+                    },
+                    {
+                      "tecnica": "Deverá ser identificado entre os integrantes da equipe um trabalhador que conhece na região rotas mais rápidas para Hospitais de Referência. Este trabalhador deverá estar instalado desde o início da atividade"
+                    },
+                    {
+                      "tecnica": "Em caso de necessidade, o resgate deverá ser realizado seguindo procedimentos de LV uma vez que a região energizada não estará aterrada. Havendo necessidade, deverá ser realizadoo aterramento dos circuitos envolvidos"
+                    },
+                    {
+                      "tecnica": "Posicionar os veículos estrategicamente para melhor execução do serviço. Em locais onde não houver ou não for possível o acesso do socorro especializado, pelo menos um veículo deve estar preparado para transportar vítimas de possíveis acidentes"
+                    },
+                    {
+                      "tecnica": "Verificar a possibilidade de que todos os acessos ao local da atividade estejam desimpedido"
+                    },
+                    {
+                      "tecnica": "Realizar reuniões técnicas com todos os envolvidos no trabalho a ser executado, repassando todos os pontos que foram definidos no planejamento da atividade"
+                    }
+                  ],
+                  "senha interrupcao da operação": {
+                    "descricao": "trata-se de uma senha que implica interrupção imediata da operação, deve ser usada quando um eletricista está sendo eletrecutado. O supervisor da equipe deve telefonar para a operação e informar a senha"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "nome": "executor07",
+            "min": 1,
+            "max": 1,
+            "obrigacao": {
+              "ferramenta": [
+                {
+                  "ferramenta": "corda"
+                },
+                {
+                  "ferramenta": "carretilha"
+                },
+                {
+                  "ferramenta": "chave catraca"
+                },
+                {
+                  "ferramenta": "bastão universal"
+                },
+                {
+                  "ferramenta": "bastão garra"
+                },
+                {
+                  "ferramenta": "estopo"
+                }
+              ],
+              "missao": [
+                {
+                  "missao": "missao0"
+                },
+                {
+                  "missao": "missao01-05"
+                },
+                {
+                  "missao": "missao02"
+                },
+                {
+                  "missao": "missao06"
+                },
+                {
+                  "missao": "missao07"
+                },
+                {
+                  "missao": "missao08"
+                },
+                {
+                  "missao": "missao09"
+                },
+                {
+                  "missao": "missao11"
+                }
+              ],
+              "seguranca": {
+                "equipamentos de protecao individual": [
+                  {
+                    "epi": "capacete"
+                  },
+                  {
+                    "epi": "uniforme anti-chama"
+                  },
+                  {
+                    "epi": "luva"
+                  },
+                  {
+                    "epi": "óculos"
+                  }
+                ],
+                "protecoes coletiva": [
+                  {
+                    "protecao coletiva": "Medição e Monitoramento"
+                  },
+                  {
+                    "protecao coletiva": "Distância e Segurança"
+                  },
+                  {
+                    "protecao coletiva": "Análise Preliminar de Riscos - APR"
+                  },
+                  {
+                    "protecao coletiva": "Interrupção das Atividades"
+                  }
+                ],
+                "movimentos seguros": [
+                  {
+                    "movimento": "andar na subestação com as mãos para baixo e vem próximo ao corpo"
+                  },
+                  {
+                    "movimento": "respeitar as distâncias seguras em relação aos equipamentos e estruturas energizadas"
+                  },
+                  {
+                    "movimento": "evitar passos espaçados dentro da subestação"
+                  },
+                  {
+                    "movimento": "manter posicionado sobre a brita"
+                  }
+                ],
+                "emergencia": {
+                  "tecnicas": [
+                    {
+                      "tecnica": "Todos os integrantes da equipe deverão possuir treinamento em primeiros socorros"
+                    },
+                    {
+                      "tecnica": "Todos os integrantes da equipe deverão possuir treinameto para Resgates em Ambientes Verticais"
+                    },
+                    {
+                      "tecnica": "A equipe deverá ter à disposição um conjunto completo de Resgate em Ambiemtes Verticais, que deverá estar localizado estrategicamente para sua pronta utilização, inclusive com os dispositivos instalados previamente, caso necessário"
+                    },
+                    {
+                      "tecnica": "Deverá ser identificado entre os integrantes da equipe um trabalhador que conhece na região rotas mais rápidas para Hospitais de Referência. Este trabalhador deverá estar instalado desde o início da atividade"
+                    },
+                    {
+                      "tecnica": "Em caso de necessidade, o resgate deverá ser realizado seguindo procedimentos de LV uma vez que a região energizada não estará aterrada. Havendo necessidade, deverá ser realizadoo aterramento dos circuitos envolvidos"
+                    },
+                    {
+                      "tecnica": "Posicionar os veículos estrategicamente para melhor execução do serviço. Em locais onde não houver ou não for possível o acesso do socorro especializado, pelo menos um veículo deve estar preparado para transportar vítimas de possíveis acidentes"
+                    },
+                    {
+                      "tecnica": "Verificar a possibilidade de que todos os acessos ao local da atividade estejam desimpedido"
+                    },
+                    {
+                      "tecnica": "Realizar reuniões técnicas com todos os envolvidos no trabalho a ser executado, repassando todos os pontos que foram definidos no planejamento da atividade"
+                    }
+                  ],
+                  "senha interrupcao da operação": {
+                    "descricao": "trata-se de uma senha que implica interrupção imediata da operação, deve ser usada quando um eletricista está sendo eletrecutado. O supervisor da equipe deve telefonar para a operação e informar a senha"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "nome": "supervisores",
+        "funcao": {
+          "nome": "supervisor",
+          "min": 1,
+          "max": 1,
+          "obrigacao": {
+            "missao": [
+              {
+                "missao": "missao0"
+              },
+              {
+                "missao": "missao10"
+              },
+              {
+                "missao": "missao11"
+              }
+            ],
+            "seguranca": {
+              "equipamentos de protecao individual": [
+                {
+                  "epi": "capacete"
+                },
+                {
+                  "epi": "uniforme anti-chama"
+                },
+                {
+                  "epi": "luva"
+                },
+                {
+                  "epi": "óculos"
+                }
+              ],
+              "protecoes coletiva": [
+                {
+                  "protecao coletiva": "Medição e Monitoramento"
+                },
+                {
+                  "protecao coletiva": "Distância e Segurança"
+                },
+                {
+                  "protecao coletiva": "Análise Preliminar de Riscos - APR"
+                },
+                {
+                  "protecao coletiva": "Interrupção das Atividades"
+                }
+              ],
+              "movimentos seguros": [
+                {
+                  "movimento": "andar na subestação com as mãos para baixo e vem próximo ao corpo"
+                },
+                {
+                  "movimento": "respeitar as distâncias seguras em relação aos equipamentos e estruturas energizadas"
+                },
+                {
+                  "movimento": "evitar passos espaçados dentro da subestação"
+                },
+                {
+                  "movimento": "manter posicionado sobre a brita"
+                }
+              ],
+              "emergencia": {
+                "tecnicas": [
+                  {
+                    "tecnica": "Todos os integrantes da equipe deverão possuir treinamento em primeiros socorros"
+                  },
+                  {
+                    "tecnica": "Todos os integrantes da equipe deverão possuir treinameto para Resgates em Ambientes Verticais"
+                  },
+                  {
+                    "tecnica": "A equipe deverá ter à disposição um conjunto completo de Resgate em Ambiemtes Verticais, que deverá estar localizado estrategicamente para sua pronta utilização, inclusive com os dispositivos instalados previamente, caso necessário"
+                  },
+                  {
+                    "tecnica": "Deverá ser identificado entre os integrantes da equipe um trabalhador que conhece na região rotas mais rápidas para Hospitais de Referência. Este trabalhador deverá estar instalado desde o início da atividade"
+                  },
+                  {
+                    "tecnica": "Em caso de necessidade, o resgate deverá ser realizado seguindo procedimentos de LV uma vez que a região energizada não estará aterrada. Havendo necessidade, deverá ser realizadoo aterramento dos circuitos envolvidos"
+                  },
+                  {
+                    "tecnica": "Posicionar os veículos estrategicamente para melhor execução do serviço. Em locais onde não houver ou não for possível o acesso do socorro especializado, pelo menos um veículo deve estar preparado para transportar vítimas de possíveis acidentes"
+                  },
+                  {
+                    "tecnica": "Verificar a possibilidade de que todos os acessos ao local da atividade estejam desimpedido"
+                  },
+                  {
+                    "tecnica": "Realizar reuniões técnicas com todos os envolvidos no trabalho a ser executado, repassando todos os pontos que foram definidos no planejamento da atividade"
+                  }
+                ],
+                "senha interrupcao da operação": {
+                  "descricao": "trata-se de uma senha que implica interrupção imediata da operação, deve ser usada quando um eletricista está sendo eletrecutado. O supervisor da equipe deve telefonar para a operação e informar a senha"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "nome": "observadores",
+        "funcao": {
+          "nome": "observador",
+          "min": 1,
+          "max": 1,
+          "obrigacao": {
+            "missao": [
+              {
+                "missao": "missao0"
+              },
+              {
+                "missao": "missao11"
+              },
+              {
+                "missao": "missao12"
+              }
+            ],
+            "seguranca": {
+              "equipamentos de protecao individual": [
+                {
+                  "epi": "capacete"
+                },
+                {
+                  "epi": "uniforme anti-chama"
+                },
+                {
+                  "epi": "luva"
+                },
+                {
+                  "epi": "óculos"
+                }
+              ],
+              "protecoes coletiva": [
+                {
+                  "protecao coletiva": "Medição e Monitoramento"
+                },
+                {
+                  "protecao coletiva": "Distância e Segurança"
+                },
+                {
+                  "protecao coletiva": "Análise Preliminar de Riscos - APR"
+                },
+                {
+                  "protecao coletiva": "Interrupção das Atividades"
+                }
+              ],
+              "movimentos seguros": [
+                {
+                  "movimento": "andar na subestação com as mãos para baixo e vem próximo ao corpo"
+                },
+                {
+                  "movimento": "respeitar as distâncias seguras em relação aos equipamentos e estruturas energizadas"
+                },
+                {
+                  "movimento": "evitar passos espaçados dentro da subestação"
+                },
+                {
+                  "movimento": "manter posicionado sobre a brita"
+                }
+              ],
+              "emergencia": {
+                "tecnicas": [
+                  {
+                    "tecnica": "Todos os integrantes da equipe deverão possuir treinamento em primeiros socorros"
+                  },
+                  {
+                    "tecnica": "Todos os integrantes da equipe deverão possuir treinameto para Resgates em Ambientes Verticais"
+                  },
+                  {
+                    "tecnica": "A equipe deverá ter à disposição um conjunto completo de Resgate em Ambiemtes Verticais, que deverá estar localizado estrategicamente para sua pronta utilização, inclusive com os dispositivos instalados previamente, caso necessário"
+                  },
+                  {
+                    "tecnica": "Deverá ser identificado entre os integrantes da equipe um trabalhador que conhece na região rotas mais rápidas para Hospitais de Referência. Este trabalhador deverá estar instalado desde o início da atividade"
+                  },
+                  {
+                    "tecnica": "Em caso de necessidade, o resgate deverá ser realizado seguindo procedimentos de LV uma vez que a região energizada não estará aterrada. Havendo necessidade, deverá ser realizadoo aterramento dos circuitos envolvidos"
+                  },
+                  {
+                    "tecnica": "Posicionar os veículos estrategicamente para melhor execução do serviço. Em locais onde não houver ou não for possível o acesso do socorro especializado, pelo menos um veículo deve estar preparado para transportar vítimas de possíveis acidentes"
+                  },
+                  {
+                    "tecnica": "Verificar a possibilidade de que todos os acessos ao local da atividade estejam desimpedido"
+                  },
+                  {
+                    "tecnica": "Realizar reuniões técnicas com todos os envolvidos no trabalho a ser executado, repassando todos os pontos que foram definidos no planejamento da atividade"
+                  }
+                ],
+                "senha interrupcao da operação": {
+                  "descricao": "trata-se de uma senha que implica interrupção imediata da operação, deve ser usada quando um eletricista está sendo eletrecutado. O supervisor da equipe deve telefonar para a operação e informar a senha"
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "objetivo": [
+      {
+        "nome": "Análise Preliminar de Risco",
+        "descricao": "Fazer Análise de todos os possíveis riscos que podem ocorrer durante a exeução das atividades",
+        "próximo objetivo": "Procedimentos Iniciais",
+        "ferramenta": "não consta",
+        "equipamento": "não consta",
+        "violacao":
+        {
+         "natureza":"não realizar a análise preliminar de riscos",
+         "consequencia":"Falta de ciência a respeito de um risco em potêncial",
+         "disparo":"eletricista se envolve em risco desconhecido",
+         "objetivo-inviabilizado":"nenhum"
+        }
 
-use App\Entities\Agent;
-use App\Entities\Tool;
-use App\Entities\ObjectMaintenance;
-use App\Entities\InThatInstant;
-use App\Entities\Condition;
-use App\Entities\Goal;
-
-class MaintenanceLiveLine
-{
-	public function running()
-	{
-
-		$roleSupervisor = new Role('supervisor');
-		$roleObservador = new Role('observador');
-		$roleExecutor01 = new Role('executor01');
-		$roleExecutor02 = new Role('executor01');
-		$roleExecutor03 = new Role('executor01');
-		$roleExecutor04 = new Role('executor01');
-		$roleExecutor05 = new Role('executor01');
-		$roleExecutor06 = new Role('executor01');
-
-		$agente01 = new Agent('agente01');
-		$agente01->changeRole($roleSupervisor)
-		
-		$agente02 = new Agent('agente02');
-		$agente02->chageRole($roleObservador);
-		
-		$agente03 = new Agent('agente03');
-		$agente03->changeRole($roleExecutor01);
-		
-		$agente04 = new Agent('agente04');
-		$agente04->changeRole($roleExecutor02);
-		
-		$agente05 = new Agent('agente05');
-		$agente05->changeRole($roleExecutor03);
-		
-		$agente06 = new Agent('agente06');
-		$agente06->changeRole($roleExecutor04);
-		
-		$agente07 = new Agent('agente07');
-		$agente07->changeRole($roleExecutor05);
-		
-		$agente08 = new Agent('agente08');
-		$agente08->changeRole($roleExecutor06);
-
-
-		$toolColarSela = new Tool('colar_sela');
-		$toolChaveCatraca = new Tool('chave_catraca');		
-		$toolBastaoGarra = new Tool('bastao_garra');
-		$toolEstropo = new Tool('estropo');
-		$toolBastaoUniversal = new Tool('bastao_universal');
-		$toolCarretilha = new Tool('carretilha');
-		$toolCavalete = new Tool('cavalete');		
-		$toolBastaoOlhaoCorda = new Tool('bastao_olhao_corda');
-		$toolLona = new Tool('lona');
-
-		$objectPedestaPoste = new ObjectMaintenance('pedestal_poste');		
-		$objectEspina = new ObjectMaintenance('espina');
-		$objectCondutor = new ObjectMaintenance('condutor');
-		$objectCorda = new ObjectMaintenance('corda');
-		$objectIsoladorDanificado = new ObjectMaintenance('isolador_danificado');
-		$objectIsoladorNovo = new ObjectMaintenance('isolador_novo');
-		$objectParafuso = new ObjectMaintenance('parafuso');
-		$objectConector = new ObjectMaintenance('conector');
-		$objectPorcaConector = new ObjectMaintenance('porca_do_conector');
-		$objectPorcaDoIsolador = new ObjectMaintenance('porca_do_isolador');
-
-		$instantAnalisePreliminar = new InThatInstant([$agente01,$agente02,$agente03,$agente04,$agente05,$agente06,$agente07,$agente08]);
-
-
-		$conditionAnaliePreliminar = new Condition();
-		$conditionAnaliePreliminar->loadInThatInstant($instantAnalisePreliminar);
-		$conditionAnaliePreliminar->loadDescription('Fazer Análise de todos os possíveis riscos que podem ocorrer durante a execução das atividades');
-
-		$goalAnalizePreliminar = new Goal($conditionAnaliePreliminar,1,1);
-		
-	}
+      },
+      {
+        "nome": "Procedimentos Iniciais",
+        "descricao": "Procedimentos iniciais",
+        "próximo objetivo": "Procedimento-Corda-Carretilha",
+        "ferramenta": "não consta",
+        "equipamento": "não consta",
+        "violacao":
+        {
+          "natureza":"não cumprir os procedimentos iniciais",
+          "consequencia":"eletricista não pode concluir seu objetivo",
+          "disparo":"não execução adequada deste objetivo",
+          "objetivo-inviabilizado":"próximo objetivo"
+        }
+      },
+      {
+        "nome": "Sinalização",
+        "descricao": "Sinalização do Local com Cones e Fitas Zebradas",
+        "próximo objetivo": "Cavalete",
+        "ferramenta": [
+          {
+            "ferramenta": "Cone"
+          },
+          {
+            "ferramenta": "Fita"
+          }
+        ],
+        "equipamento": "não consta",
+        "violacao":
+        {
+          "natureza":"Não realizar a sinalização do local",
+          "consequencia":"A pessoa desavizada pode se envolver em um acidente",
+          "disparo":"entrada da pessoa desavizada na zona onde está ocorrendo manutenção",
+          "objetivo-inviabilizado":"nenhum"
+        }
+      },
+      {
+        "nome": "Cavalete",
+        "descricao": "Montagem do Cavalete que mantem as ferramentas",
+        "próximo objetivo": "Limpar-Ferramenta",
+        "ferramenta": "não consta",
+        "equipamento": "não consta",
+        "violacao":
+        {
+          "natureza":"Não montar o cavalete",
+          "consequencia":"Rompimento do dieletrico da ferramenta por estar contaminada com sujeira devido ao fato de ter ficado disposta de maneira inapropriada",
+          "disparo":"ferramenta ficar em tal estado que a corrente de fulga se torne elevada o suficiente para ferir ou matar alguém",
+          "objetivo-inviabilizado":"nenhum"
+        }
+      },
+      {
+        "nome": "Limpar-Ferramenta",
+        "descricao": "Limpar as Ferramentas com álcool Isopropílico",
+        "próximo objetivo": "Medição-Corrente-Fulga-Inicio-Manutenção",
+        "ferramenta": "não consta",
+        "equipamento": "não consta",
+        "violacao":
+        {
+          "natureza":"Não realizar limpeza da ferramenta",
+          "consequencia":"Rompimento do dielétrico da ferramenta por estar contaminada com sujeito devido ao fato de não ter sido limpa de forma adequada",
+          "disparo":"ferramenta ficar em tal estado que a corrente de fulga se torne elevada o suficiente para ferir ou matar alguém",
+          "objetivo-inviabilizado":"nenhum"
+        }
+      },
+      {
+        "nome": "Medição-Corrente-Fulga-Inicio-Manutenção",
+        "descricao": "Testar o Isolamento das Ferramentas antes de fazer uso. Usar a ferramenta específica esse tipo de teste.",
+        "próximo objetivo": "Ferramenta-Posicionar-Cavalete",
+        "ferramenta": "Testador de corrente de fulga",
+        "equipamento": "não consta",
+        "violacao":
+        {
+          "natureza":"Não realizar a medida de corrente de fulga",
+          "consequencia":"Acidente pelo fato da corrente de fulga atingir setor valor que pode vir a matar alguém",
+          "disparo":"corrente de fulga elevado",
+          "objetivo-inviabilizado":"nenhum"
+        }
+      },
+      {
+        "nome": "Medição-Corrente-Fulga-Durante-Operação",
+        "descricao": "Medir a corrente de fulga na Ferramenta durante o uso",
+        "próximo objetivo": "Não Consta",
+        "ferramenta": "Testador de corrente de fulga",
+        "equipamento": "não consta",
+        "violacao":
+        {
+          "natureza":"Não realizar a medida de corrente de fulga",
+          "consequencia":"Acidente pelo fato da corrente de fulga atingir setor valor que pode vir a matar alguém",
+          "disparo":"corrente de fulga elevado",
+          "objetivo-inviabilizado":"nenhum"
+        }
+      },
+      {
+        "nome": "Medição-Corrente-Fulga-Final-Operação",
+        "descricao": "Medir a corrente de fulta na ferramenta no final da manutenção",
+        "próximo objetivo": "Não Consta",
+        "ferramenta": "Testador de corrente de fulga",
+        "equipamento": "não consta",
+        "violacao":
+        {
+          "natureza":"Não realizar a medida de corrente de fulga",
+          "consequencia":"Acidente pelo fato da corrente de fulga atingir setor valor que pode vir a matar alguém",
+          "disparo":"corrente de fulga elevado",
+          "objetivo-inviabilizado":"nenhum"
+        }
+      },
+      {
+        "nome": "Ferramenta-Posicionar-Cavalete",
+        "descricao": "Posicionar as Ferramentas no Cavalete",
+        "próximo objetivo": "Não Consta",
+        "ferramenta": "não consta",
+        "equipamento": "não consta",
+        "violacao":
+        {
+          "natureza":"Não posicionar as ferramentas no cavalete",
+          "consequencia":"Acidente com eletricidade (grade ou mortal)",
+          "disparo":"ferramenta ficar em tal estado que a corrente de fulga se torne elevada o suficiente para ferir ou matar alguém",
+          "objetivo-inviabilizado":"nenhum"
+        }
+      },
+      {
+        "nome": "Procedimentos-Corda-Carretilha",
+        "descricao": "Todos os procedimentos relacionados com a instalação da Corda e Carretilha",
+        "próximo objetivo": "Operação-Isolador de Pedestal",
+        "ferramenta": "não consta",
+        "equipamento": "não consta",
+        "violacao":
+        {
+          "natureza":"Não montar o sistema corda carretilha na torre",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Operação-Isolador de Pedestal"
+        }
+      },
+      {
+        "nome": "Verifica-Corda-Limpa",
+        "descricao": "Verificar se a corda está limpa",
+        "próximo objetivo": "Teste-Impedância-Corda",
+        "ferramenta": "corda",
+        "equipamento": "não consta",
+        "violacao":
+        {
+          "natureza":"Não verificação da corda",
+          "consequencia":"Acidente com eletricidade por corrente de fulga elevada",
+          "disparo":"Corda suja a ponto da corrente de fulga ser elevada o suficiente a ponto de ferir ou matar alguém",
+          "objetivo-inviabilizado":"não consta"
+        }
+      },
+      {
+        "nome": "Teste-Impedância-Corda",
+        "descricao": "Fazer o teste da impedância da corda. ",
+        "próximo objetivo": "Rasga-Corda-Pedaços",
+        "ferramenta": [
+          {
+            "ferramenta": "Corda"
+          },
+          {
+            "ferramenta": "Testador corrente de fulga"
+          }
+        ],
+        "equipamento": "não consta",
+        "violacao":
+        {
+          "natureza":"Não realizar teste na corda",
+          "consequencia":"Acidente com eletricidade por corrente de fulga",
+          "disparo":"Corrente de fulga elevada a ponto de ferir ou matar alguém",
+          "objetivo-inviabilizado":"nenhum"
+        }
+      },
+      {
+        "nome": "Rasga-Corda-Pedaços",
+        "descricao": "Rasgar a corda em vários pedaços",
+        "próximo objetivo": "Interpolar-corda-bastão universal",
+        "ferramenta": [
+          {
+            "ferramenta": "Corda"
+          }
+        ],
+        "equipamento": "não consta",
+        "violacao":
+        {
+          "natureza":"Não rasgar cordas em pedaços",
+          "consequencia":"Acidente com eletricidade por corrente de fulga elevada",
+          "disparo":"Corrente de fulga elevada a ponto de ferir ou matar alguém",
+          "objetivo-inviabilizado":"nenhum"
+        }
+      },
+      {
+        "nome": "Interpolar-corda-bastão universal",
+        "descricao": "Interpolar os pedaços de corda com bastão Universal",
+        "próximo objetivo": "Fixar-Carretilha-Corda-Bastão Universal",
+        "ferramenta": [
+          {
+            "ferramenta": "Corda"
+          },
+          {
+            "ferramenta": "Bastão Universal"
+          }
+        ],
+        "equipamento": "não consta",
+        "violacao":
+        {
+          "natureza":"Não montar o cavalete",
+          "consequencia":"Rompimento do dielétrico da ferramenta por estar contaminada com sujeito devido ao fato de ter ficado disposta de maneira inapropriada",
+          "disparo":"ferramenta ficar em tal estado que a corrente de fulga se torne elevada o suficiente para ferir ou matar alguém",
+          "objetivo-inviabilizado":"Ferramenta-Posicionar-Cavalete"
+        }
+      },
+      {
+        "nome": "Fixar-Carretilha-Corda-Bastão Universal",
+        "descricao": "Prender a Carretilha na corda (sendo esta corda interpolada por bastões universais)",
+        "próximo objetivo": "Instalar-sela-Colar-Lado 1",
+        "ferramenta": [
+          {
+            "ferramenta": "Corda"
+          },
+          {
+            "ferramenta": "Carretilha"
+          }
+        ],
+        "equipamento": "não consta",
+        "violacao":
+        {
+          "natureza":"Não prender a carretilha na corda",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disaro":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Operação-Isolador de Pedestal"
+        }
+      },
+      {
+        "nome": "Instalar-sela-Colar-Lado 1 ",
+        "descricao": "Instalar a sela e o colar na coluna do lado 1",
+        "próximo objetivo": "Fixar-Bastão-Garra-Cola-sela",
+        "ferramenta": [
+          {
+            "ferramenta": "sela"
+          },
+          {
+            "ferramenta": "colar"
+          }
+        ],
+        "equipamento": "torre",
+        "violacao":
+        {
+          "natureza":"Não instalar sela-colar-lado 1",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Fixar-Bastão-Garra-Cola-sela"
+        }
+      },
+      {
+        "nome": "Fixar-Bastão-Garra-Colar-sela",
+        "descricao": "Fixar o bastão garra no colar e sela no lado 1",
+        "próximo objetivo": "Fixar-Bastão-Garra-Lado-1-Condutor",
+        "ferramenta": 
+        [
+          {
+            "ferramenta": "Bastão Garra"
+          },
+          {
+            "ferramenta": "colar"
+          },
+          {
+            "ferramenta": "sela"
+          }
+        ],
+        "equipamento": "condutor",
+        "violacao":
+        {
+          "natureza":"Não instalar sela-colar-lado",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Fixar-Bastão-Garra-Lado-1-Condutor"
+        }
+      },
+      {
+        "nome": "Fixar-Bastão-Garra-Lado-1-Condutor",
+        "descricao": "Fixar o topo do bastão garra do lado 1 no Condutor",
+        "próximo objetivo": "Instalar-sela-Colar-Coluna-Lado 2",
+        "ferramenta": 
+        [
+          {
+            "ferramemta": "Bastão Garra"
+          }
+        ],
+        "equipamento": "condutor",
+        "violacao":
+        {
+          "natureza":"Não instalação do bastão garra no lado 1 do condutor",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquadas"}
+          ],
+          "objetivo-inviabilizado":"Instalar-sela-Colar-Coluna-Lado 2"
+        }
+      },
+      {
+        "nome": "Instalar-sela-Colar-Coluna-Lado 2",
+        "descricao": "Instalar a sela e o colar na coluna base do lado 2",
+        "próximo objetivo": "Fixar-Bastão-Garra-Invertido-Colar-sela-Lado 2",
+        "ferramenta": [
+          {
+            "ferramenta": "Bastão Garra"
+          }
+        ],
+        "equipamento": "torre",
+        "violacao":
+        {
+          "natureza":"Não instalar sela Colar Coluna Lado 2",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Fixar-Bastão-Garra-Invertido-Colar-sela-Lado 2"
+        }
+      },
+      {
+        "nome": "Fixar-Bastão-Garra-Invertido-Colar-sela-Lado 2",
+        "descricao": "Fixar o bastão garra invertido no colar e na sela do lado 2",
+        "próximo objetivo": "Fixar-Carretilha-Corda-Fibra-Sintético-Ponta-Bastão",
+        "ferramenta": [
+          {
+            "ferramenta": "Bastão Garra"
+          },
+          {
+            "ferramenta": "colar"
+          },
+          {
+            "ferramenta": "sela"
+          }
+        ],
+        "equipamento": "torre",
+        "violacao":
+        {
+          "natureza":"Não Fixar Bastão Garra Invertido Colar sela lado 2",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],          
+          "objetivo-inviabilizado":"Fixar-Carretilha-Corda-Fibra-Sintético-Ponta-Bastão"
+        }
+      },
+      {
+        "nome": "Fixar-Carretilha-Corda-Fibra-Sintética-Ponta-Bastão",
+        "descricao": "Fixar a carretilha com a corda de fibra sintética na ponta do bastão",
+        "próximo objetivo": "Girar-sela-Erguer-Bastão",
+        "ferramenta": [
+          {
+            "ferramenta": "corda"
+          },
+          {
+            "ferramenta": "bastão guarra"
+          }
+        ],
+        "equipamento": "torre",
+        "violacao":
+        {
+          "natureza":"Não fixar carretilha com a corda de fibra sintética na ponta do bastão",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Girar-sela-Erguer-Bastão"
+        }
+      },
+      {
+        "nome": "Girar-sela-Erguer-Bastão",
+        "descricao": "Girar sela de forma a erguer o bastão com carretilha e corda na ponta",
+        "próximo objetivo": "Instalar-Enforcar-Estopo-Alto-Isolador",
+        "ferramenta": [
+          {
+            "ferramenta": "sela"
+          },
+          {
+            "ferramenta": "bastão guarra"
+          }
+        ],
+        "equipamento": "torre",
+        "violacao":
+        {
+          "natureza":"Não girar sela de forma a erguer o bastão com carretilha e corda na ponta",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Instalar-Enforcar-Estopo-Alto-Isolador"
+        }
+      },
+      {
+        "nome": "Instalar-Enforcar-Estopo-Alto-Isolador",
+        "descricao": "Instalar e enforcar com um estopo o alto do isolador usando um bastão Universal",
+        "próximo objetivo": "Conectar-Corda-Estopo",
+        "ferramenta": [
+          {
+            "ferramenta": "estopo"
+          },
+          {
+            "ferramenta": "bastão universal"
+          }
+        ],
+        "equipamento": "isolador",
+        "violacao":
+        {
+          "natureza":" Não instalar e não inforcar com um estopo o alto do isolador usando um bastão Universal",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Conectar-Corda-Estopo"
+        }
+      },
+      {
+        "nome": "Conectar-Corda-Estopo",
+        "descricao": "Conectar a corda ao Estopo",
+        "próximo objetivo": "não consta",
+        "ferramenta": [
+          {
+            "ferramenta": "corda"
+          },
+          {
+            "ferramenta": "estopo"
+          }
+        ],
+        "equipamento": "isolador",
+        "violacao":
+        {
+          "natureza":"Não conectara corda ao estopo",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"não consta"
+        }
+      },
+      {
+        "nome": "Operação-Isolador de Pedestal",
+        "descricao": "Objetivos relacionados com a parte Operacional da Substuição do Isolador de Pedestal",
+        "próximo objetivo": "Finalizacao-Troca-Isolador-Pedestal",
+        "ferramenta": "não consta",
+        "violacao":
+        {
+          "natureza":"Não cumprir com os objetivos relacionados com a parte Operacional da substiuição do  isolador de pedestal",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],          
+          "objetivo-inviabilizado":"Finalizacao-Troca-Isolador-Pedestal"
+        }
+      },
+      {
+        "nome": "Bastão-Universal-Chave-Catraca-Saltar-Parafusos",
+        "descricao": "Usar um bastão Universal com chave catraca para soltar os parafusos de cima",
+        "próximo objetivo": "Retirar-Parafusos-Cima",
+        "ferramenta": [
+          {
+            "ferramenta": "bastão universal"
+          },
+          {
+            "ferramenta": "chave catraca"
+          }
+        ],
+        "equipamento": [
+          {
+            "equipamento": "isolador"
+          },
+          {
+            "equipamento": "torre"
+          }
+        ],
+        "violacao":
+        {
+          "natureza":"Não usar um bastão Universal com chave catraca para soltar os parafusos",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Retirar-Parafusos-Cima"
+        }
+      },
+      {
+        "nome": "Retirar-Parafusos-Cima",
+        "descricao": "Retirar a parte de cima do conector com a chave catraca para soltar os parafusos de cima",
+        "próximo objetivo": "não-consta",
+        "ferramenta": "chave catraca",
+        "equipamento": [
+          {
+            "equipamento": "isolador"
+          },
+          {
+            "equipamento": "conector"
+          },
+          {
+            "equipamento": "condutor"
+          }
+        ],
+        "violacao":
+        {
+          "natureza":"Não retirar a parte de cima do conector com a chave catraca para soltar os parafusos de cima",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"nenhum"
+        }
+      },
+      {
+        "nome": "Finalizacao-Troca-Isolador-Pedestal",
+        "descricao": "Sequência de atividades que levam a finalização da troca do isolador de pedestal",
+        "próximo objetivo": "não consta",
+        "ferramenta": "não consta",
+        "equipamento": [
+          {
+            "equipamento": "condutor"
+          },
+          {
+            "equipamento": "torre"
+          }
+        ],
+        "violacao":
+        {
+          "natureza":"Não executar as atividades que levam a finalziação da troca do isolador de pedestal",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":""
+        }
+      },
+      {
+        "nome": "Tencionar-Corda-Estopo",
+        "descricao": "Tencionar a Corda Presa ao Estopo",
+        "próximo objetivo": "Tirar-Parafusos-Baixo-Isolador-Chave-Catraca",
+        "ferramenta": [
+          {
+            "ferramenta": "corda"
+          },
+          {
+            "ferramenta": "estopo"
+          }
+        ],
+        "equipamento": [
+          {
+            "equipamento": "isolador"
+          },
+          {
+            "equipamento": "torre"
+          }
+        ],
+        "violacao":
+        {
+          "natureza":"Não tencionar a corda e o estopo",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Tirar-Parafusos-Baixo-Isolador-Chave-Catraca"
+        }
+      },
+      {
+        "nome": "Tirar-Parafusos-Baixo-Isolador-Chave-Catraca",
+        "descricao": "Tirar os parafusos de baixo do isolador com a chave catraca",
+        "próximo objetivo": "Passar-Corda-Base-Isolador-Chave-Catraca",
+        "ferramenta": "chave catraca",
+        "equipamento": "isolador",
+        "violacao":
+        {
+          "natureza":"Não retirar os parafusos de baixo do isolador com a chave catraca",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Pasar-Corda-Base-Isolador-Chave-Catraca"
+        }
+      },
+      {
+        "nome": "Passar-Corda-Base-Isolador-Chave-Catraca",
+        "descricao": "Passar a Corda na base do isolador para auxionar na descida",
+        "próximo objetivo": "Corda-Erguer-Isolador",
+        "ferramenta": "chave catraca",
+        "equipamento": "isolador",
+        "violacao":
+        {
+          "natureza":"Não passar a corda na base do isolador para auxilar na descida",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Corda-Erguer-Isolador"
+        }
+      },
+      {
+        "nome": "Corda-Erguer-Isolador",
+        "descricao": "Puxar corda para Erguer o Isolador",
+        "próximo objetivo": "Retirada-Completa-Isolador",
+        "ferramenta": "corda",
+        "equipamento": "isolador",
+        "violacao":
+        {
+          "natureza":"Não puxar a corda para erguer o isolador",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Retirada-Completa-Isolador"
+        }
+      },
+      {
+        "nome": "Retirada-Completa-Isolador",
+        "descricao": "Fazer a retirada completa do isolador até o chão",
+        "próximo objetivo": "Estopo-Isolador",
+        "ferramenta": "não consta",
+        "equipamento": "isolador",
+        "violacao":
+        {
+          "natureza":"Não fazer a retirada completa do isolador",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Estopo-Isolador"
+        }
+      },
+      {
+        "nome": "Estopo-Isolador",
+        "descricao": "Enforcar estopo no novo Isolador",
+        "próximo objetivo": "Suspender-Isolador",
+        "ferramenta": "estopo",
+        "equipamento": "isolador",
+        "violacao":
+        {
+          "natureza":"Não enforcar o novo isolador com um estopo",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Suspender-Isolador"
+        }
+      },
+      {
+        "nome": "Suspender-Isolador",
+        "descricao": "Suspender Novo Isolador",
+        "próximo objetivo": "Engate-Corda-Guia",
+        "ferramenta": "corda",
+        "equipamento": "isolador",
+        "violacao":
+        {
+          "natureza":"Não suspender o novo isolador",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Engate-Corda-Guia"
+        }
+      },
+      {
+        "nome": "Engate-Corda-Guia",
+        "descricao": "Engatar corda Guia Isolador de Pedestal",
+        "próximo objetivo": "Içar-Isolador",
+        "ferramenta": "corda",
+        "equipamento": "isolador",
+        "violacao":
+        {
+          "natureza":"Não engatar a corda guia do isolador de pedestal",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Içar-Isolador"
+        }
+      },
+      {
+        "nome": "Içar-Isolador",
+        "descricao": "Içar novo Isolador na coluna usando a chave catraca",
+        "próximo objetivo": "Parafusar-Isolador-Coluna-Chave-Catraca",
+        "ferramenta": "chave catraca",
+        "equipamento": "isolador",
+        "violacao":
+        {
+          "natureza":"Não içar novo isolador na coluna usando a chave catraca",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Parafusar-Isolador-Coluna-Chave-Catraca"
+        }
+      },
+      {
+        "nome": "Parafusar-Isolador-Coluna-Chave-Catraca",
+        "descricao": "Parafusar base do isolador na coluna usando chave catraca",
+        "próximo objetivo": "Fechar-Conector-Bastão Universal",
+        "ferramenta": "bastão universal",
+        "equipamento": [
+          {
+            "equipamento": "isolador"
+          },
+          {
+            "equipamento": "torre"
+          }
+        ],
+        "violacao":
+        {
+          "natureza":"Não parafusar base do isolador na coluna usando chave catraca",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Fechar-Conector-Bastão"
+        }
+      },
+      {
+        "nome": "Fechar-Conector-Bastão Universal",
+        "descricao": "Fechar os parafusos do conector usando o bastão universal com a chave catraca",
+        "próximo objetivo": "Desconectar-Bastão-Garra-Conector",
+        "ferramenta": [
+          {
+            "ferramenta": "bastão universal"
+          },
+          {
+            "ferramenta": "chave catraca"
+          }
+        ],
+        "equipamento": [
+          {
+            "equipamento": "condutor"
+          },
+          {
+            "equipamento": "conector"
+          },
+          {
+            "equipamento": "isolador"
+          }
+        ],
+        "violacao":
+        {
+          "natureza":"Não fechar os parafusos do conector usando o bastão universal com a chave catraca",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Desconectar-Bastão-Garra-Conector"
+        }
+      },
+      {
+        "nome": "Desconectar-Bastão-Garra-Conector",
+        "descricao": "Desconectar o bastão garra do conector",
+        "próximo objetivo": "Retirar-Bastão-Garra",
+        "ferramenta": "bastão garra",
+        "equipamento": [
+          {
+            "equipamento": "conector"
+          },
+          {
+            "equipamento": "condutor"
+          }
+        ],
+        "violacao":
+        {
+          "natureza":"Não desconectaro bastão garra do conector",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Retirar-Bastão-Garra"
+        }
+      },
+      {
+        "nome": "Retirar-Bastão-Garra",
+        "descricao": "Retitrar o bastão garra do conector",
+        "próximo objetivo": "Retirar sela-Colar",
+        "ferramenta": [
+          {
+            "ferramenta": "sela"
+          },
+          {
+            "ferramenta": "colar"
+          }
+        ],
+        "equipamento": [
+          {
+            "equipamento": "conector"
+          },
+          {
+            "equipamento": "condutor"
+          }
+        ],
+        "violacao":
+        {
+          "natureza":"Retirar-Bastão-Garra",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Retirar sela-Colar"
+        }
+      },
+      {
+        "descricao": "Retirar sela, colar e bastão garra lado 1",
+        "nome": "Retirar sela-Colar",
+        "próximo objetivo": "Retirar-Estopo-Isolador",
+        "ferramenta": 
+        [
+          {
+            "ferramenta": "sela"
+          },
+          {
+            "ferramenta": "colar"
+          },
+          {
+            "ferramenta": "garra"
+          }
+        ],
+        "equipamento": "torre",
+        "violacao":
+        {
+          "natureza":"Não retirar sela colar",
+          "consequencia-sistêmica":"Inviabiliza o restante da manutenção",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Retirar Estopo Isolador"
+        }
+      },
+      {
+        "nome": "Retirar-Estopo-Isolador",
+        "descricao": "Retirar estopo do Isolador",
+        "próximo objetivo": "Retirar-sela-Colar-Garra",
+        "ferramenta": [
+          {
+            "ferramenta": "sela"
+          },
+          {
+            "ferramenta": "colar"
+          },
+          {
+            "ferramenta": "garra"
+          }
+        ],
+        "equipamento": "isolador",
+        "violacao":
+        {
+          "natureza":"Não retirar o estopo do isolador",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],
+          "objetivo-inviabilizado":"Retirar sela Colar Garra"
+        }
+      },
+      {
+        "descricao": "Retirar sela e colar garra lado 2",
+        "nome": "Retirar-sela-Colar-Garra",
+        "próximo objetivo": "Recolher-Equipamento",
+        "ferramenta": [
+          {
+            "ferramenta": "sela"
+          },
+          {
+            "ferramenta": "colar"
+          },
+          {
+            "ferramenta": "garra"
+          }
+        ],
+        "equipamento": "torre",
+        "violacao":
+        {
+          "natureza":"Não retirar a sela e colar garra do lado 2",
+          "consequencia-sistêmica":"Inviabiliza o restante da manutenção",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"número de eletricistas inadequado para a atividade"},
+            {"disparo":"ferramentas inadquada"},
+            {"disparo":"execução inadequada da atividade"}
+          ],          
+          "objetivo-inviabilizado":"Recolher-Equipamento"
+        }
+      },
+      {
+        "nome": "Recolher-Equipamento",
+        "descricao": "Recolher equipamentos",
+        "próximo objetivo": "não consta",
+        "ferramenta": "não consta",
+        "equipamento": "não consta",
+        "violacao":
+        {
+          "natureza":"Não recolhero os equipamentos",
+          "consequencia-sistêmica":"Inviabiliza o restante da manutenção",
+          "consequencia":"Inviabiliza o restante da manutenção",
+          "disparo":
+          [
+            {"disparo":"tratamento inapropriado do material"}
+          ],          
+          "objetivo-inviabilizado":"não consta"
+        }
+      },
+      {
+        "nome": "Método-a-Distância",
+        "descricao": "Método em que o procedimento é executado a distancia do potencial",
+        "próximo objetivo": "não consta",
+        "ferramenta": "não consta",
+        "equipamento": "não consta"
+      },
+      {
+        "nome": "Supervisao",
+        "descricao": "Orientar e Supervisionar as atividades técnicas que estão ocorrendo em campo",
+        "próximo objetivo": "não consta",
+        "ferramenta": "não consta",
+        "equipamento": "não consta",
+        "violacao":
+        {
+          "natureza":"Não orientar e supervisionar os executores",
+          "consequencia":"Acidente com eletricidade levando a ferimentos graves ou a morte",
+          "disparo":
+          [
+            {"disparo":"Supervisor realiza sua função de forma inaproprieada"},
+            {"disparo":"Supervisor mal preparado"},
+            {"disparo":"Supervisor não intervem durante a ocorrência de um erro gerencial"},
+            {"disparo":"Comunicações inapropriadas durante a execução do serviço"}
+          ],
+          "objetivo-inviabilizado":"Método-a-Distância"
+        }
+      },
+      {
+        "nome": "Observação",
+        "descricao": "Observar se está ocorrendo alguma violação das normas de segurança dos procedimentos",
+        "próximo objetivo": "não consta",
+        "ferramenta": "não consta",
+        "equipamento": "não consta",
+        "violacao":
+        {
+          "natureza":"Não realização da observação sobre o aspecto de segurança",
+          "consequencia":"Acidente elétrico envolvendo um eletricista",
+          "disparo":
+          [
+            {"disparo":"Observador realiza função de forma inapropriada"},
+            {"disparo":"Observador mal preparado"},
+            {"disparo":"Observador não intervem durante a ocorrência de um erro envolvendo a segurança dos eletricistas"}
+          ],
+          "objetivo-inviabilizado":"Objetivo-Final"
+        }
+      },
+      {
+        "nome": "Objetivo-Final",
+        "descricao": "Objetivo final da manutenção foi atingido com sucesso",
+        "próximo objetivo": "não consta",
+        "ferramenta": "não consta",
+        "equipamento": "não consta"
+      },
+      {
+        "nome": "Etapas-Metodologicas",
+        "descricao": "Etapas que devem ser feitas para concluir a manutenção",
+        "próxmo objetivo": "não consta",
+        "ferramenta": "não consta",
+        "equipamento": "não consta"
+      },
+      {
+        "nome": "Método-Finalizacao",
+        "descricao": "Método-Distância em conjunto com finalização",
+        "próxmo objetivo": "não consta",
+        "ferramenta": "não consta",
+        "equipamento": "não consta"
+      }
+    ],
+    "missao": [
+      {
+        "nome": "missao0",
+        "relevancia": "1",
+        "objetivo": {
+          "nome": "Análise Preliminar de Risco"
+        }
+      },
+      {
+        "nome": "missao01-01",
+        "relevancia": "1",
+        "objetivo": {
+          "nome": "Sinalização"
+        }
+      },
+      {
+        "nome": "missao01-02",
+        "relevancia": "1",
+        "objetivo": {
+          "nome": "Cavalete"
+        }
+      },
+      {
+        "nome": "missao01-03",
+        "relevancia": "1",
+        "objetivo": {
+          "nome": "Limpar-Ferramenta"
+        }
+      },
+      {
+        "nome": "missao01-04",
+        "relevancia": "1",
+        "objetivo": {
+          "nome": "Medição-Corrente-Fulga-Inicio-Manutenção"
+        }
+      },
+      {
+        "nome": "missao01-05",
+        "relevancia": "1",
+        "objetivo": {
+          "nome": "Ferramenta-Posicionar-Cavalete"
+        }
+      },
+      {
+        "nome": "missao01-06",
+        "relevancia": "1",
+        "objetivo": {
+          "nome": "Medição-Corrente-Fulga-Durante-Operação"
+        }
+      },
+      {
+        "nome": "missao02",
+        "relevancia": "1",
+        "objetivo": [
+          {
+            "nome": "Procedimentos-Corda-Carretilha"
+          },
+          {
+            "nome": "Verificar-Corda-Limpa"
+          }
+        ]
+      },
+      {
+        "nome": "missao03",
+        "relevancia": "1",
+        "objetivo": [
+          {
+            "nome": "Rasga-Corda-Pedaços"
+          },
+          {
+            "nome": "Interpolar-corda-bastão universal"
+          },
+          {
+            "nome": "Fixar-Carretilha-Corda-Bastão Universal"
+          },
+          {
+            "nome": "Instalar-sela-Colar-Lado 1"
+          },
+          {
+            "nome": "Fixar-Bastão-Garra-Colar-sela"
+          },
+          {
+            "nome": "Fixar-Bastão-Garra-Lado-1-Condutor"
+          },
+          {
+            "nome": "Instalar-sela-Colar-Coluna-Lado 2"
+          },
+          {
+            "nome": "Fixar-Bastão-Garra-Invertido-Colar-sela-Lado 2"
+          },
+          {
+            "nome": "Fixar-Carretilha-Corda-Fibra-Sintética-Ponta-Bastão"
+          },
+          {
+            "nome": "Girar-sela-Erguer-Bastão"
+          }
+        ]
+      },
+      {
+        "nome": "missao04",
+        "relevancia": "1",
+        "objetivo": [
+          {
+            "nome": "Conectar-Corda-Estopo"
+          },
+          {
+            "nome": "Instalar-Enforcar-Alto-Isolador"
+          },
+          {
+            "nome": "Conectar-Corda-Estopo"
+          },
+          {
+            "nome": "Bastão-Universal-Chave-Catraca-Saltar-Parafusos"
+          },
+          {
+            "nome": "Retirar-Parafusos-Cima"
+          },
+          {
+            "nome": "Tencionar-Corda-Estopo"
+          },
+          {
+            "nome": "Tirar-Parafusos-Baixo-Isolador-Chave-Catraca"
+          }
+        ]
+      },
+      {
+        "nome": "missao05",
+        "relevancia": "1",
+        "objetivo": [
+          {
+            "nome": "Passar-Corda-Base-Isolador-Chave-Catraca"
+          },
+          {
+            "nome": "Corda-Erguer-Isolador"
+          },
+          {
+            "nome": "Retirada-Completa-Isolador"
+          },
+          {
+            "nome": "Estopo-Isolador"
+          }
+        ]
+      },
+      {
+        "nome": "missao06",
+        "relevancia": "1",
+        "objetivo": [
+          {
+            "nome": "Suspender-Isolador"
+          },
+          {
+            "nome": "Engate-Corda-Guia"
+          }
+        ]
+      },
+      {
+        "nome": "missao07",
+        "relevancia": "1",
+        "objetivo": [
+          {
+            "nome": "Içar-Isolador"
+          },
+          {
+            "nome": "Parafusar-Isolador-Coluna-Chave-Catraca"
+          },
+          {
+            "nome": "Fechar-Conector-Bastão Universal"
+          }
+        ]
+      },
+      {
+        "nome": "missao08",
+        "relevancia": "1",
+        "objetivo": [
+          {
+            "nome": "Desconectar-Bastão-Garra-Conector"
+          },
+          {
+            "nome": "Retirar sela-Colar"
+          },
+          {
+            "nome": "Retirar-Estopo-Isolador"
+          },
+          {
+            "nome": "Retirar-sela-Colar-Garra"
+          },
+          {
+            "nome": "Recolher-Equipamento"
+          },
+          {
+            "nome": "Medição-Corrente-Fulga-Final-Operação"
+          }
+        ]
+      },
+      {
+        "nome": "missao09",
+        "relevancia": "1",
+        "objetivo": [
+          {
+            "nome": "Procedimentos Iniciais"
+          },
+          {
+            "nome": "Procedimentos-Corda-Carretilha"
+          },
+          {
+            "nome": "Operação-Isolador de Pedestal"
+          },
+          {
+            "nome": "Finalizaca-Troca-Isolador-Pedestal"
+          }
+        ]
+      },
+      {
+        "nome": "missao10",
+        "relevancia": "1",
+        "objetivo": [
+          {
+            "nome": "Supervisão"
+          }
+        ]
+      },
+      {
+        "nome": "missao11",
+        "relevancia": "1",
+        "objetivo": [
+          {
+            "nome": "Objetivo-Final"
+          },
+          {
+            "nome": "Método-a-Distância"
+          },
+          {
+            "nome": "Metodo-Finalização"
+          }
+        ]
+      },
+      {
+        "nome": "missao12",
+        "relevancia": "1",
+        "objetivo": [
+          {
+            "nome": "Observação"
+          }
+        ]
+      }
+    ],
+    "ligacao": [
+      {
+        "nome": "ligacao01",
+        "funcao01": "executor01",
+        "funcao02": "executor02",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao02",
+        "funcao01": "executor01",
+        "funcao02": "executor03",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao03",
+        "funcao01": "executor01",
+        "funcao02": "executor04",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao04",
+        "funcao01": "executor01",
+        "funcao02": "executor05",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao05",
+        "funcao01": "executor01",
+        "funcao02": "executor06",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao06",
+        "funcao01": "executor01",
+        "funcao02": "executor07",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao07",
+        "funcao01": "executor02",
+        "funcao02": "executor01",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao08",
+        "funcao01": "executor02",
+        "funcao02": "executor03",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao09",
+        "funcao01": "executor02",
+        "funcao02": "executor04",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao10",
+        "funcao01": "executor02",
+        "funcao02": "executor05",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao11",
+        "funcao01": "executor02",
+        "funcao02": "executor06",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao12",
+        "funcao01": "executor02",
+        "funcao02": "executor07",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao13",
+        "funcao01": "executor03",
+        "funcao02": "executor01",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao14",
+        "funcao01": "executor03",
+        "funcao02": "executor02",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao15",
+        "funcao01": "executor03",
+        "funcao02": "executor04",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao16",
+        "funcao01": "executor03",
+        "funcao02": "executor05",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao17",
+        "funcao01": "executor03",
+        "funcao02": "executor06",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao18",
+        "funcao01": "executor03",
+        "funcao02": "executor07",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao19",
+        "funcao01": "executor04",
+        "funcao02": "executor01",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao20",
+        "funcao01": "executor04",
+        "funcao02": "executor02",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao21",
+        "funcao01": "executor04",
+        "funcao02": "executor02",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao22",
+        "funcao01": "executor04",
+        "funcao02": "executor03",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao23",
+        "funcao01": "executor04",
+        "funcao02": "executor05",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao24",
+        "funcao01": "executor04",
+        "funcao02": "executor05",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao25",
+        "funcao01": "executor04",
+        "funcao02": "executor06",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao26",
+        "funcao01": "executor04",
+        "funcao02": "executor07",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao27",
+        "funcao01": "executor05",
+        "funcao02": "executor01",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao28",
+        "funcao01": "executor05",
+        "funcao02": "executor02",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao29",
+        "funcao01": "executor05",
+        "funcao02": "executor03",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao30",
+        "funcao01": "executor05",
+        "funcao02": "executor04",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao31",
+        "funcao01": "executor05",
+        "funcao02": "executor05",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao32",
+        "funcao01": "executor05",
+        "funcao02": "executor06",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao33",
+        "funcao01": "executor05",
+        "funcao02": "executor07",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao34",
+        "funcao01": "executor06",
+        "funcao02": "executor01",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao35",
+        "funcao01": "executor06",
+        "funcao02": "executor02",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao36",
+        "funcao01": "executor06",
+        "funcao02": "executor03",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao37",
+        "funcao01": "executor06",
+        "funcao02": "executor04",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao38",
+        "funcao01": "executor06",
+        "funcao02": "executor05",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao39",
+        "funcao01": "executor06",
+        "funcao02": "executor06",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao40",
+        "funcao01": "executor07",
+        "funcao02": "executor01",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao41",
+        "funcao01": "executor07",
+        "funcao02": "executor02",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao42",
+        "funcao01": "executor07",
+        "funcao02": "executor03",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao43",
+        "funcao01": "executor07",
+        "funcao02": "executor04",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao44",
+        "funcao01": "executor07",
+        "funcao02": "executor05",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao45",
+        "funcao01": "executor07",
+        "funcao02": "executor06",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao46",
+        "funcao01": "supervisor",
+        "funcao02": "executor01",
+        "autoridade": true,
+        "comunicacao": false,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao47",
+        "funcao01": "supervisor",
+        "funcao02": "executor02",
+        "autoridade": true,
+        "comunicacao": false,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao48",
+        "funcao01": "supervisor",
+        "funcao02": "executor03",
+        "autoridade": true,
+        "comunicacao": false,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao49",
+        "funcao01": "supervisor",
+        "funcao02": "executor02",
+        "autoridade": true,
+        "comunicacao": false,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao50",
+        "funcao01": "supervisor",
+        "funcao02": "executor03",
+        "autoridade": true,
+        "comunicacao": false,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao51",
+        "funcao01": "supervisor",
+        "funcao02": "executor04",
+        "autoridade": true,
+        "comunicacao": false,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao52",
+        "funcao01": "supervisor",
+        "funcao02": "executor05",
+        "autoridade": true,
+        "comunicacao": false,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao53",
+        "funcao01": "supervisor",
+        "funcao02": "executor06",
+        "autoridade": true,
+        "comunicacao": false,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao54",
+        "funcao01": "supervisor",
+        "funcao02": "executor07",
+        "autoridade": true,
+        "comunicacao": false,
+        "sabe que existe": false
+      },
+      {
+        "nome": "ligacao55",
+        "funcao01": "observador",
+        "funcao02": "executor01",
+        "autoridade": false,
+        "comunicacao": false,
+        "sabe que existe": true
+      },
+      {
+        "nome": "ligacao56",
+        "funcao01": "observador",
+        "funcao02": "executor02",
+        "autoridade": false,
+        "comunicacao": false,
+        "sabe que existe": true
+      },
+      {
+        "nome": "ligacao57",
+        "funcao01": "observador",
+        "funcao02": "executor03",
+        "autoridade": false,
+        "comunicacao": false,
+        "sabe que existe": true
+      },
+      {
+        "nome": "ligacao58",
+        "funcao01": "observador",
+        "funcao02": "executor04",
+        "autoridade": false,
+        "comunicacao": false,
+        "sabe que existe": true
+      },
+      {
+        "nome": "ligacao59",
+        "funcao01": "observador",
+        "funcao02": "executor04",
+        "autoridade": false,
+        "comunicacao": false,
+        "sabe que existe": true
+      },
+      {
+        "nome": "ligacao60",
+        "funcao01": "observador",
+        "funcao02": "executor05",
+        "autoridade": false,
+        "comunicacao": false,
+        "sabe que existe": true
+      },
+      {
+        "nome": "ligacao61",
+        "funcao01": "observador",
+        "funcao02": "executor06",
+        "autoridade": false,
+        "comunicacao": false,
+        "sabe que existe": true
+      },
+      {
+        "nome": "ligacao62",
+        "funcao01": "observador",
+        "funcao02": "executor07",
+        "autoridade": false,
+        "comunicacao": false,
+        "sabe que existe": true
+      },
+      {
+        "nome": "ligacao63",
+        "funcao01": "supervisor",
+        "funcao02": "observadir",
+        "autoridade": false,
+        "comunicacao": true,
+        "sabe que existe": false
+      }
+    ],
+    "compatibilidade": [
+      {
+        "nome": "compatibilidade01",
+        "funcao01": "executor01",
+        "funcao02": "executor02"
+      },
+      {
+        "nome": "compatibilidade02",
+        "funcao01": "executor01",
+        "funcao02": "executor03"
+      },
+      {
+        "nome": "compatibilidade03",
+        "funcao01": "executor01",
+        "funcao02": "executor04"
+      },
+      {
+        "nome": "compatibilidade04",
+        "funcao01": "executor01",
+        "funcao02": "executor05"
+      },
+      {
+        "nome": "compatibilidade05",
+        "funcao01": "executor01",
+        "funcao02": "executor06"
+      },
+      {
+        "nome": "compatibilidade06",
+        "funcao01": "executor01",
+        "funcao02": "executor07"
+      },
+      {
+        "nome": "compatibilidade07",
+        "funcao01": "executor02",
+        "funcao02": "executor03"
+      },
+      {
+        "nome": "compatibilidade08",
+        "funcao01": "executor02",
+        "funcao02": "executor04"
+      },
+      {
+        "nome": "compatibilidade09",
+        "funcao01": "executor02",
+        "funcao02": "executor05"
+      },
+      {
+        "nome": "compatibilidade10",
+        "funcao01": "executor02",
+        "funcao02": "executor06"
+      },
+      {
+        "nome": "compatibilidade11",
+        "funcao01": "executor02",
+        "funcao02": "executor07"
+      },
+      {
+        "nome": "compatibilidade13",
+        "funcao01": "executor03",
+        "funcao02": "executor04"
+      },
+      {
+        "nome": "compatibilidade14",
+        "funcao01": "executor03",
+        "funcao02": "executor05"
+      },
+      {
+        "nome": "compatibilidade15",
+        "funcao01": "executor03",
+        "funcao02": "executor06"
+      },
+      {
+        "nome": "compatibilidade16",
+        "funcao01": "executor03",
+        "funcao02": "executor07"
+      },
+      {
+        "nome": "compatibilidade18",
+        "funcao01": "executor04",
+        "funcao02": "executor05"
+      },
+      {
+        "nome": "compatibilidade19",
+        "funcao01": "executor04",
+        "funcao02": "executor06"
+      },
+      {
+        "nome": "compatibilidade20",
+        "funcao01": "executor04",
+        "funcao02": "executor07"
+      },
+      {
+        "nome": "compatibilidade21",
+        "funcao01": "executor05",
+        "funcao02": "executor06"
+      },
+      {
+        "nome": "compatibilidade22",
+        "funcao01": "executor05",
+        "funcao02": "executor07"
+      },
+      {
+        "nome": "compatibilidade23",
+        "funcao01": "executor06",
+        "funcao02": "executor07"
+      }
+    ],
+    "relacionamento de objetivos": [
+      {
+        "serie": [
+          {
+            "nome": "serie01",
+            "super objetivo": "Etapas-Metodológicas",
+            "subobjetivo": [
+              {
+                "objetivo": "Análise Preliminar de Risco"
+              },
+              {
+                "objetivo": "Procedimentos Iniciais"
+              },
+              {
+                "objetivo": "Procedimentos-Corda-Carretilha"
+              },
+              {
+                "objetivo": "Operação-Isolador de Pedestal"
+              }
+            ]
+          },
+          {
+            "nome": "serie02",
+            "super objetivo": "Método-Finalização",
+            "subobjetivo": [
+              {
+                "objetivo": "Método-Distância"
+              },
+              {
+                "objetivo": "Finalizacao-Troca-Isolador-Pedestal"
+              }
+            ]
+          },
+          {
+            "nome": "serie03",
+            "super objetivo": "Procedimentos-Corda-Carretilha",
+            "subobjetivo": [
+              {
+                "objetivo": "Verificar-Corda-Limpa"
+              },
+              {
+                "objetivo": "Teste-Impedância-Corda"
+              },
+              {
+                "objetivo": "Rasga-Corda-Pedaços"
+              },
+              {
+                "objetivo": "Fixar-Carretilha-Corda-Bastão Universal"
+              },
+              {
+                "objetivo": "Interpolar-corda-bastão universal"
+              },
+              {
+                "objetivo": "Instalar-sela-Colar-Lado 1 "
+              },
+              {
+                "objetivo": "Fixar-Bastão-Garra-Colar-sela"
+              },
+              {
+                "objetivo": "Fixar-Bastão-Garra-Lado-1-Condutor"
+              },
+              {
+                "objetivo": "Instalar-sela-Colar-Coluna-Lado 2"
+              },
+              {
+                "objetivo": "Fixar-Bastão-Garra-Invertido-Colar-sela-Lado 2"
+              },
+              {
+                "objetivo": "Fixar-Carretilha-Corda-Fibra-Sintética-Ponta-Bastão"
+              },
+              {
+                "objetivo": "Girar-sela-Erguer-Bastão"
+              },
+              {
+                "objetivo": "Instalar-Enforcar-Estopo-Alto-Isolador"
+              },
+              {
+                "objetivo": "Conectar-Corda-Estopo"
+              }
+            ]
+          },
+          {
+            "nome": "serie04",
+            "super objetivo": "Operação-Isolador de Pedestal",
+            "subobjetivo": [
+              {
+                "objetivo": "Bastao-Uniersal-Chave-Catraca-Saltar-Parafusos"
+              },
+              {
+                "objetivo": "Retirar-Parafusos-Cima"
+              }
+            ]
+          },
+          {
+            "nome": "serie05",
+            "super objetivo": "Finalizacao-Troca-Isolador-Pedestal",
+            "subobjetivo": [
+              {
+                "objetivo": "Tencionar-Corda-Estopo"
+              },
+              {
+                "objetivo": "Tirar-Parafusos-Baixo-Isolador-Chave-Catraca"
+              },
+              {
+                "objetivo": "Passar-Corda-Base-Isolador-Chave-Catraca"
+              },
+              {
+                "objetivo": "Corda-Erguer-Isolador"
+              },
+              {
+                "objetivo": "Suspender-Isolador"
+              },
+              {
+                "objetivo": "Retirar-Completa-Isolador"
+              },
+              {
+                "objetivo": "Estopo-Isolador"
+              },
+              {
+                "objetivo": "Engate-Corda-Guia"
+              },
+              {
+                "objetivo": "Içar-Isolador"
+              },
+              {
+                "objetivo": "Parafusar-Isolador-Coluna-Chave-Catraca"
+              },
+              {
+                "objetivo": "Fechar-Conector-Bastão Universal"
+              },
+              {
+                "objetivo": "Desconectar-Bastão-Garra-Conector"
+              },
+              {
+                "objetivo": "Retirar-Bastão-Garra"
+              },
+              {
+                "objetivo": "Retirar sela-Colar"
+              },
+              {
+                "objetivo": "Retirar-Estopo-Isolador"
+              },
+              {
+                "objetivo": "Retirar-sela-Colar-Garra"
+              },
+              {
+                "objetivo": "Medição-Corrente-Fulga-Final-Operação"
+              },
+              {
+                "objetivo": "Recolher-Equipamento"
+              }
+            ]
+          }
+        ],
+        "paralelo": [
+          {
+            "nome": "paralelo01",
+            "super objetivo": "Objetivo-Final",
+            "subobjetivo": [
+              {
+                "objetivo": "Supervisão"
+              },
+              {
+                "objetivo": "Observação"
+              },
+              {
+                "objetivo": "Metodo-Finalização"
+              }
+            ]
+          },
+          {
+            "nome": "paralelo02",
+            "super objetivo": "Procedimentos Iniciais",
+            "subobjetivo": [
+              {
+                "objetivo": "Sinalização"
+              },
+              {
+                "objetivo": "Cavalete"
+              },
+              {
+                "objetivo": "Limpar-Ferramenta"
+              },
+              {
+                "objetivo": "Medição-Corrente-Fulga-Inicio-Manutenção"
+              },
+              {
+                "objetivo": "Ferramenta-Posicionar-Cavalete"
+              }
+            ]
+          },
+          {
+            "nome": "paralelo03",
+            "super objetivo": "Metodo-Distancia",
+            "superobjetivo": [
+              {
+                "objetivo": "Medição-Corrente-Fulga-Durante-Operação"
+              },
+              {
+                "objetivo": "Etapas-Metodologicas"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "dominio": {    
+    "geral": 
+    [
+      {
+        "conhecimento": "Eletromagnetismo -> Carga Elétrica, Lei de Coulomb, Campo Elétrico, Potencial Elétrico, Capacitores, Lei de Gauss, Corrente Elétrica, Campo Magnético, Lei de Ampere, Lei de Faraday, Indutores, Equações de Maxwell, Campos Eletromagneticos e Sistemas Trifásicos",
+        "documento": "Habilitação para eletricistas de manutenção de LTS e SES - Técnica de Linha Viva - Métodos à Distância e ao Potencial"
+      },
+      {
+        "conhecimento": "Condições Meteorológicas -> Monitoramento das Condições Atmosféricas para Execução de Serviços em LV",
+        "documento": "Habilitação para eletricistas de manutenção de LTS e SES - Técnica de Linha Viva - Métodos à Distância e ao Potencial"
+      },
+      {
+        "conhecimento": "Distância de segurança -> Definição, Efeito Capacitivo",
+        "documento": "Habilitação para eletricistas de manutenção de LTS e SES - Técnica de Linha Viva - Métodos à Distância e ao Potencial"
+      }
+    ],
+    "especifico": 
+    [
+      {
+        "ferramenta": [
+          {
+            "nome": "Cone",
+            "categoria": "Sinalização",
+            "manuseio": "simples",
+            "teste": "não necessário",
+            "armazenamento": "balcão",
+            "equipamento": "não interagem com outros equipamentos",
+            "componente": "não é constituído por componentes menores",
+            "quantidade de profissionais": "1"
+          },
+          {
+            "nome": "Fita",
+            "categoria": "Sinalização",
+            "manuseio": "simples",
+            "teste": "não necessário",
+            "armazenamento": "balcão",
+            "equipamento": "não interagem com outros equipamentos",
+            "componente": "não é constituído por componentes menores",
+            "quantidade de profissionais": "1"
+          },
+          {
+            "nome": "Carretilha",
+            "categoria": "Ferramenta Instalada",
+            "manuseio": "Eletricistas devem conduzir a carretilha em condutor. A ferramenta é instalada na estrutura durante o ato da manutenção",
+            "teste": "nenhum teste a ser feito em campo",
+            "armazenamento": "balcão",
+            "equipamento": [
+              {
+                "equipamento": "condutor"
+              },
+              {
+                "equipamento": "carretilha"
+              }
+            ],
+            "componente": "constituído por compomentes menores, porém que não são necessários serem descritos nessa representação",
+            "quantidade de profissionais": "2-3"
+          },
+          {
+            "nome": "Corda",
+            "categoria": "Ferramenta Instalados",
+            "manuseio": "Essa ferramenta é instalada na esturtura para poder concluir com o objetivo da manutenção",
+            "teste": [
+              {
+                "teste": "verificar se a corda está limpa"
+              },
+              {
+                "teste": "Testador de Corrente de fulga portátil (amperímetro projetado para isso)"
+              }
+            ],
+            "armazenamento": "Local seco e limpo",
+            "equipamentos": [
+              {
+                "equipamento": "torre-estrutura metálica"
+              },
+              {
+                "equipamento": "carretillha"
+              },
+              {
+                "equipamento": "condutor"
+              },
+              {
+                "equipamento": "estopo"
+              }
+            ],
+            "componente": "não é constituído por componentes menores",
+            "quantidade de profissionais": "2 - 3"
+          },
+          {
+            "nome": "Bastão Universal",
+            "categoria": "Ferramenta em Bastão",
+            "manuseio": "acopla em outras estruturas para poder acessar objetos que estão no potencial do condutor sendo o eletricista no potencial do terra",
+            "teste": [
+              {
+                "teste": "verificar o condutor está limpo"
+              },
+              {
+                "teste": "Testador de Corrente de fulga portátil (amperímetro projetado para isso)"
+              }
+            ],
+            "armazenamento": "local limpo e seco. Bastão deve ser envolto de silicone ao ser guardado",
+            "equipamento": [
+              {
+                "equipamento": "corda"
+              },
+              {
+                "equipamento": "chave catraca"
+              },
+              {
+                "equipamento": "condutor"
+              }
+            ],
+            "componente": [
+              {
+                "componente": "cabeçote"
+              },
+              {
+                "compomente": "bastão-isolante"
+              }
+            ],
+            "quantidade de profissionais": "1"
+          },
+          {
+            "nome": "Testador de corrente de fulga",
+            "categoria": "Testador",
+            "manuseio": "Ferramenta usada para testar a corrente de fulga do material. Deve ser usando em todas as ferramentas que vão para o potêncial",
+            "teste": "não é feito teste em campo",
+            "armazenamento": "local seguro de choques mecânicos",
+            "equipamento": "Todas as ferramentas que ficam entre o potencial do condutor e o potencial do terra",
+            "componente": "não é formado por componentes menores",
+            "quantidade de profissionais": "1"
+          },
+          {
+            "nome": "sela",
+            "categoria": "Ferramenta Instalada",
+            "manuseio": "Objetivo que é instalado na torre de fixação do Isolador de pedestal para que esse possa receber demais estruturas",
+            "teste": "não é feito teste para em campo para esse objeto",
+            "armazenamento": "em um local limpo",
+            "equipamento": [
+              {
+                "equipamento": "colar"
+              },
+              {
+                "equipamento": "torre de sustentação do isolador de pedestal"
+              }
+            ],
+            "componente": "não é formado por componentes menores",
+            "quantidade de profissionais": "1"
+          },
+          {
+            "nome": "colar",
+            "categoria": "Ferramenta Instalada",
+            "manuseio": "Instalada na sela. O bastão garra é acoplado por dentro da sela",
+            "teste": "não é feito testes em campo",
+            "armazenamento": "em local limpo",
+            "equipamento": [
+              {
+                "equipamento": "colar"
+              },
+              {
+                "equipamento": "bastão garra"
+              }
+            ],
+            "componente": "não é formado por componentes menores",
+            "quantidade de profissionais": "1"
+          },
+          {
+            "nome": "bastão garra",
+            "categoria": "ferramenta em bastão",
+            "manuseio": "Essa ferramenta possui uma garra que permite acoplar a condutores e a estruturas similares.",
+            "teste": "Teste de corrente de fulga",
+            "armazenamento": "em local limpo e seco. O bastão deve ser envolto de silicone",
+            "equipamento": [
+              {
+                "equipamento": "colar"
+              },
+              {
+                "equpamento": "condutor"
+              }
+            ],
+            "componente": [
+              {
+                "componente": "garra"
+              },
+              {
+                "componente": "bastão"
+              },
+              {
+                "componente": [
+                  {
+                    "ou": "colarinho"
+                  },
+                  {
+                    "ou": "sela"
+                  }
+                ]
+              }
+            ],
+            "quantidade de profissionais": ""
+          },
+          {
+            "nome": "estopo",
+            "categoria": "Ferramenta Instalada",
+            "manuseio": "Envolto ao Isolador",
+            "teste": "não é feito testes em campo",
+            "armazenamento": "local limpo e seco",
+            "equipamento": 
+            [
+              {
+                "equipamento": "isolador de pedestal"
+              },
+              {
+                "equipamento": "corda isolante"
+              },
+              {
+                "equipamento": "bastão-isolante"
+              }
+            ],
+            "componente": "não é formado por nenhum subcomponente",
+            "quantidade de profissionais": "2"
+          },
+          {
+            "nome": "chave-catraca",
+            "categoria": "chaves",
+            "manuseio": "é acoplado ao bastão universal. Essa chave é usada para soltar e fixar parafusos em estruturas que está no potencial.",
+            "teste": "nenhum teste em campo ",
+            "armazenamento": "local limpo",
+            "equipamento": [
+              {
+                "equipamento": "bastão universal"
+              },
+              {
+                "equipamento": "parafuso"
+              }
+            ],
+            "componente": "não é constituído por componentes mínimos",
+            "quantidade de profissionais": "1 à 3"
+          }
+        ],
+        "equipamento": [
+          {
+            "nome": "condutor",
+            "nome01": "cabo",
+            "configuracao": "cabos de alumínio tempera H-19, para linha aérea - 69kV - 500kV",
+            "constituição": "aluminio",
+            "norma": "nbr 07271",
+            "formado": "fios de alumínio tempera H-19 dispostos em coroas, número de coroas varia conforme a tensão",
+            "interações": [
+              {
+                "equipamento": "conector",
+                "condição": "mantem cabo fixo a cabeça do isolador"
+              },
+              {
+                "equipamento": "isolador de pedestal",
+                "condição": "se mantem abaixo do isolador"
+              }
+            ],
+            "finalidade": "guia de onda eletromagnética para transferência de potência"
+          },
+          {
+            "nome": "torre",
+            "finalidade": "dar suporte ao isolador de pedestal para que este fique posicionado de forma correta",
+            "interação": {
+              "equipamento": "isolador de pedestal",
+              "condicao": "se mantem embaixo do isolador de pedestal"
+            },
+            "constituição": "aço"
+          },
+          {
+            "nome": "isolador de pedestal",
+            "problemas": [
+              {
+                "problema": "ruptura do dielétrico"
+              },
+              {
+                "problema": "trinca"
+              },
+              {
+                "problema": "ausência de saia"
+              },
+              {
+                "problema": "saia(s) fortemente danificada"
+              },
+              {
+                "problema": "corrente de fulga elevada"
+              },
+              {
+                "problema": "efeito corona elevado"
+              },
+              {
+                "problema": "fim da vida útil"
+              }
+            ],
+            "norma": "Isolador-suporte- pedestal de porcelana - Unidades e colunas - Padronização de dimensões e características",
+            "constituiçao": "porcelana",
+            "configuracao": "Isoladores tipo pedestal (can-and-pin) estão disponíveis nas normas NBR ANSI, sendo normalmente utilizados até 500kV, em unidades empilhadas. A resistência mecânica individual vai de 800 daN até 1500 daN",
+            "finalidade": "Isolar estruturas que devem se manter no potencial do terra de estruturas que devem se manter no potencial do condutor",
+            "interações": [
+              {
+                "equipamento": "condutor",
+                "condicao": "deve-se manter a baixo do condutor, o condutor é preso ao isolador por meio de um conector"
+              },
+              {
+                "equipamento": "conector",
+                "condicao": "estrutura que prende o condutor ao isoador"
+              },
+              {
+                "equipamento": "torre",
+                "condicao": "se mantêm entre o chão e o isolador sendo esse fixado naquele por meio de parafusos aproprieados"
+              }
+            ]
+          },
+          {
+            "nome": "conector",
+            "constituição": "aluminio",
+            "finalidade": "manter o condutor preso ao cabeçote isolador de pedestal",
+            "interações": [
+              {
+                "equipamento": "isolador de pedestal",
+                "condicao": "mantem o condutor preso ao isolador. É posicionado a cima do isolador de pedestal e do condutor, com quatro parafusos em cada extremidade - o condutor passa a se manter firme no cabeçote do isolador"
+              },
+              {
+                "equipamento": "condutor"
+              }
+            ]
+          }
+        ],
+        "metodologia": {
+          "nome": "distância",
+          "descricao": "eletricistas executam manutenção estando no potencial do terra. Para realizar a manutenção, os eletricistas necessitam de ferramentas que possuem partes isolantes. Método mais seguro e normalmente usado em instalações onde as estruturas não estão muito alta. É preferível sempre optar pelo método a distânca, inclusive para isolador de pedestal"
+        }
+      }
+    ]
+  },
+  "seguranca": [
+    {
+      "nome": "",
+      "prevencao": [
+        {
+          "equipamento de protecao individual": [
+            {
+              "nome": "capacete",
+              "finalidade": "proteger a cabeça contra choques mecânicos e descargas elétricas",
+              "violacao":
+              {
+                "natureza":"não usar o capacete",
+                "consequencia":"sofrer algum trauma no crânio",
+                "disparo":"queda de objeto"              
+              }
+            },
+            {
+              "nome": "uniforme anti-chama",
+              "finalidade": "proteger o corpo do profissional contra chamas",
+              "violacao":
+              {
+                "natureza":"não fazer uso do uniforme anti-chama",
+                "consequencia":"ter sérias queimaduras",             
+                "disparo":"formação de arco-voltaico"                
+              }
+            },
+            {
+              "nome": "luvas",
+              "finalidade": "nos trabalos a distância, o manuseio dos bastões é feito com o uso de luvas, sendo essas de couro macio ou de vaqueta com objetivo de evitar contaminação dos mesmos",
+              "violacao":s
+              {              
+                "natureza":"não fazer uso de luvas",
+                "consequencia":
+                [
+                  {"consequencia":"lesionar as mãos"},
+                  {"consequencia":"perder o controle da ferramenta"}
+                ],                                                            
+                "disparo":"não ter força o suficiente para manter a ferramenta"                                          
+              }
+            },
+            {
+              "nome": "óculos",
+              "finalidade": "quando as condições exigirem, deverá ser feito o uso de óculos especiais contra ofuscamento",
+              "violacao":
+              {
+                "natureza":"não usar o óculos",                
+                "consequencia":
+                [
+                  {"consequencia":"ser eletrecutado"},
+                  {"consequencia":"eletrecutar um colega"},
+                  {"consequencia":"sofrer uma lesão"},
+                  {"consequencia":"gerar uma lesão em um colega"}
+                ],
+                "disparo":"ter a visão ofuscada por conta do raio de sol"                               
+              }
+            }
+          ],
+          "protecao coletiva": [
+            {
+              "nome": "Medição e Monitoramento",
+              "finalidade": "Equipamentos usados no potencial devem ser monitorados antes, durante e depois dos trabalhos",
+              "documento": "IT-00006 DATA:19/08/2015",
+              "violacao":
+              {
+                "natureza":"não realizar medição e monitoramento",                               
+                "consequencia":"acidente com eletricidade em alta tensão",
+                "disparo":"corrente de fulga alta demais"                
+              }
+            },
+            {
+              "nome": "Distâncias de Segurança",
+              "finalidade": "Em trabalhos a distância e ao potencial, os profissionais devem ter cautela no que tange as questões referente a distância segura, tanto para o aterreamento bem como para o potencial. Essas distâncias são: Tensão 69 kV ->(FT 1,20 m), (FF 1,50 m) - 88 kV -> (FT 1,35m), (FF 1,65 m), 138 kV -> (FT 1,50 m) e (FF 2,00), 230 kV (FT 2,00) e (FF 2,70), 345 kV (FT 2,6) e (FF 4,10), 440 kV (FT 3,20 m) - (FF 5,20 m), e 525 (4,00 kV FT), (6,10 kV FF).",
+              "documento": "IT-00006 DATA:19/08/2015",
+              "violacao":
+              {
+                "natureza":"não respeitar as distâncias seguras",
+                "consequencia":"acidente com eletricidade em alta tensão por indução elétrica",               
+                "disparo":"dielétrico baixo demais é rompido gerando transferência de carga"             
+              }
+            },
+            {
+              "nome": "Análise Preliminar de Riscos - APR",
+              "finalidade": "A Análise Preliminar de Riscos (APR) é uma ferramenta utilizada como forma de prevenção ativa que permite identificar e bloquear os agentes de acidetes antes da execução das atividades. Este documento deverá ser preenchido antes do início das atividades",
+              "documento": "IT-00006 DATA:19/08/2015",
+              "violacao":
+              {
+                "natureza":"não realizar a análise preliminar de riscos",
+                "consequencia":"acidente com eletricidade em alta tensão",
+                "disparo":"ocorrência de um risco não detectado"              
+              }
+            },
+            {
+              "nome": "Interrupção das Atividades",
+              "finalidade": "O trabalho deve ser interrompido nas seguintes condições > Refeição, Condições atmosféricas desfavoráveis, encerramento do expediente",
+              "documento": "IT-00006 DATA:19/08/2015",
+              "violacao":
+              {
+                "natureza":"não interromper as atividades",                                
+                "consequencia":"acidente com eletricidade em alta tensão",
+                "disparo":"mudança de cenário favorário a uma condição de acidente"                             
+              }
+            }
+          ],
+          "movimentos seguros": [
+            {
+              "movimento": "andar na subestação com as mãos para baixo e bem próxima ao corpo",
+              "violacao":
+              {
+                "natureza":"não se movimentar corretamente dentro da subestação",
+                "consequencia":"acidente elétrico em alta tensão por indução",
+                "disparo":"rompimento do dielétrico"                
+              }
+            },
+            {
+              "movimento": "respeitar as distâncias seguras em relação aos equipamentos e estruturas energizadas",
+              "violacao":
+              {
+                "natureza":"não respeitar as distâncias seguras em relação aos equipamentos e estruturas energizadas",
+                "consequencia":
+                [
+                  {"consequencia":"acidente em alta tensão por contato"},
+                  {"consequencia":"acidente em alta tensão por indução"}
+                ],                
+                "disparo":"rompimento do dielétrico" 
+              }
+            },
+            {
+              "movimento": "evitar passos espaçados dentro da subestação",
+              "violacao":
+              {
+                "natureza":"ANdar deforma espaçada dentro da subestação",
+                "consequencia":"acidente com eletricidade por tensão de passo",
+                "disparo":"Diferença de potencial entre os dois pés ser tão elevada a ponto de gerar condução de corrente"                              
+              }
+            },
+            {
+              "movimento": "manter posicionado sobre a brita",
+              "violacao":
+              {
+                "natureza":"não se manter posicionado sobre a brita",                
+                "consequencia":"acidente com eletricidade",                
+                "disparo":"diferença de potencial ser elevada o suficiente"                
+              }
+            }
+          ]
+        }
+      ],
+      "emergencia": {
+        "tecnicas": 
+        [
+          {
+            "tecnica": "Todos os integrantes da equipe deverão possuir treinamento em primeiros socorros",
+            "documento": "IT-0002 DATA:15/06/2015",
+              "violacao":
+              {
+                "natureza":"Integrante em equipe que não possui treinamento em primeiros socorros",
+                "consequencia-sistêmica":"Falta de capacidade de socorrer vítmas",
+                "consequencia":"Falta de capacidade de socorrer vítmas",
+                "disparo":"Ir para um procedimento de manutenção sem o treinamento adequado"
+              }
+          },
+          {
+            "tecnica": "A equipe deverá ter à disposição um conjunto completo de Resgate em Ambiemtes Verticais, que deverá estar localizado estrategicamente para sua pronta utilização, inclusive com os dispositivos instalados previamente, caso necessário",
+            "documento": "IT-0002 DATA:15/06/2015",
+              "violacao":
+              {
+                "natureza":"Não ter à disposição um conjunto completo de Resgate em Ambientes Verticais",
+                "consequencia-sistêmica":"Inviabilização das atividades de manutenção",
+                "consequencia":"executor que sofrer algum problema em altura não conseguirá ser resgatado",
+                "disparo":"Ocorrência de algum acidente em altura e falta de um conjunto completo de resgate em altura"
+              }
+          },
+          {
+            "tecnica": "Deverá ser identificado entre os integrantes da equipe um trabalhador que conhece na região rotas mais rápidas para Hospitais de Referência. Este trabalhador deverá estar instalado desde o início da atividade",
+            "documento": "IT-0002 DATA:15/06/2015",
+              "violacao":
+              {
+                "natureza":"Não ter nenhum integrante da equipe que conheça algum hospital de referência",
+                "consequencia":"Não conseguir evitar uma morte que poderia ser evitada",
+                "disparo":"Ocorrência de um acidente"                                
+              }
+          },
+          {
+            "tecnica": "Em caso de necessidade, o resgate deverá ser realizado seguindo procedimentos de LV uma vez que a região energizada não estará aterrada. Havendo necessidade, deverá ser realizadoo aterramento dos circuitos envolvidos",
+            "documento": "IT-0002 DATA:15/06/2015",
+              "violacao":
+              {
+                "natureza":"Resgate é realizado sem seguir os procedimentos de LV",                
+                "consequencia":"Não conseguir evitar uma morte que poderia ser evitada",
+                "disparo":"Ocorrência de um acidente"                
+              }
+          },
+          {
+            "tecnica": "Posicionar os veículos estrategicamente para melhor execução do serviço. Em locais onde não houver ou não for possível o acesso do socorro especializado, pelo menos um veículo deve estar preparado para transportar vítimas de possíveis acidentes",
+            "documento": "IT-0002 DATA:15/06/2015",
+              "violacao":
+              {
+                "natureza":"Não posicionar os veículos estrategicamente",             
+                "consequencia":"Não conseguir evitar uma morte que poderia ser evitada",
+                "disparo":"Ocorrência de um acidente"                
+              }
+          },
+          {
+            "tecnica": "Verificar a possibilidade de que todos os acessos ao local da atividade estejam desimpedido",
+            "documento": "IT-0002 DATA:15/06/2015",
+              "violacao":
+              {
+                "natureza":"Não fazer a veirificação da possibilidade de que todos os acessos ao local da atividade esteja desimpedido",
+                "consequencia":"Não conseguir evitar uma morte que poderia ser evitada",
+                "disparo":"Ocorrência de um acidente"              
+              }
+          },
+          {
+            "tecnica": "Realizar reuniões técnicas com todos os envolvidos no trabalho a ser executado, repassando todos os pontos que foram definidos no planejamento da atividade",
+            "documento": "IT-0002 DATA:15/06/2015",
+              "violacao":
+              {
+                "natureza":"Não realizar a reunião técnica com todos os envolvidos no trabalho a ser executado",
+                "consequencia":"Acidente com eletricidade em alta tensão",
+                "disparo":"Presença de algo com potencial risco que poderia ter sido detecado pela reunião, mas não foi devido a ausência da reunião técnica ou devido a execução inadequada da mesma"               
+              }
+          }
+        ],
+        "senha interrupcao da operação": [
+          {
+            "descricao": "trata-se de uma senha que implica interrupção imediata da operação, deve ser usada quando um eletricista está sendo eletrecutado. O supervisor da equipe deve telefonar para a operação e informar a senha",
+            "documento": "IT-0002 DATA:15/06/2015",
+             "violacao":
+             {
+                "natureza":"Não conseguir interromper as atividades",
+                "consequencia":"Não conseguir evitar uma morte que poderia ser evitada",
+                "disparo":"Ocorrência de um acidente"                
+             }
+          }
+        ]
+      }
+    }
+  ]
 }

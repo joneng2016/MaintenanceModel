@@ -58,6 +58,11 @@ class RunningCommand
 		foreach($entities as $entity)
 			$this->kernel->createEntity($entity);
 	}
+	public function databaseFile()
+	{
+		$this->kernel->createDatabaseFile('connectiondb');
+	}
+
 }
 
 

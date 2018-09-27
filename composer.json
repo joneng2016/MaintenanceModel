@@ -13,7 +13,8 @@
 		{
 			"App\\Entities\\": "app/entities/",
 			"App\\Command\\": "app/command/",
-			"App\\Ontology\\": "app/ontology/"
+			"App\\Ontology\\": "app/ontology/",
+			"App\\DB\\":"app/database"
 		}
 	}
 }

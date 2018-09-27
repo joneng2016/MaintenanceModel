@@ -11,6 +11,7 @@ class ComposerStaticInit292cbac91126b0fda6fc19a5af0dafd5
         array (
             'App\\Ontology\\' => 13,
             'App\\Entities\\' => 13,
+            'App\\DB\\' => 7,
             'App\\Command\\' => 12,
         ),
     );
@@ -23,6 +24,10 @@ class ComposerStaticInit292cbac91126b0fda6fc19a5af0dafd5
         'App\\Entities\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/entities',
+        ),
+        'App\\DB\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/database',
         ),
         'App\\Command\\' => 
         array (
