@@ -21,17 +21,34 @@ class FormalizeQueryToCall
 										'artefactOne' => $artefactOneId, 
 										'artefactTwo' => $artefactTwoId
 									];
-		$this->connection->execute((new InsertRelationArtefact),$toInsert);
+		return $this->connection->execute((new InsertRelationArtefact),$toInsert);
 	}
 	public function insertCAA($oneId,$twoId)
 	{
-		$toInsert->oneId = $oneId;
-		$toInsert->twoId = $twoId;
-		$this->connection->execute(new InsertCondRelArtefact,$toInsert);
+		$toInsert = (object) [
+				'oneId' => $oneId,
+				'twoId' => $twoId
+		];
+		return $this->connection->execute(new InsertCondRelArtefact,$toInsert);
 	}
 	public function insertEntity($name)
 	{
-		$toInsert->name = $name;
+		$toInsert = (object) ['name' => $name];
 		$this->connection->execute(new InsertEntity,$toInsert);
+	}
+	public function selectArtefactId($name)
+	{
+		return $this->connection->execute(new SelectArtefact,$name);
+	}
+	public function insertGoal($description,$probability,$percentualOK,$conditionId)
+	{
+		$toInsert = (object)
+		[
+			"description" => $description,
+			"probability" => $probability,
+			"percentualOk" => $percentualOk,
+			"conditionId" => $conditionId
+		];
+		return $this->connection->execyte(new InsertGoal,$toInsert);
 	}
 }

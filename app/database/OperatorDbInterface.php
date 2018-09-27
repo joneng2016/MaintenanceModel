@@ -4,5 +4,5 @@ namespace App\DB;
 
 interface OperatorDbInterface 
 {
-	public function execute($connection,$objectBank);
+	public function execute($connection,$objectBank,&$returnInformation);
 }

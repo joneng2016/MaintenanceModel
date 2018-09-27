@@ -13,7 +13,8 @@ class ConnectionDb
 	} 
 	public function execute($db,$objectBank)
 	{
-		$db->execute($this->connection,$objectBank);
+		$db->execute($this->connection,$objectBank,$returnInformation);
+		return $returnInformation;
 	}
 	
 }
