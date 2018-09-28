@@ -8,7 +8,7 @@ class ConnectionDb
 {
 	public function __construct($servername,$username,$password,$dbname)
 	{
-		$this->connection = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+		$this->connection = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
 		$this->connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	} 
 	public function execute($db,$objectBank)

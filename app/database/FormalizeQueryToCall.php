@@ -40,7 +40,7 @@ class FormalizeQueryToCall
 	{
 		return $this->connection->execute(new SelectArtefact,$name);
 	}
-	public function insertGoal($description,$probability,$percentualOK,$conditionId)
+	public function insertGoal($description,$probability,$percentualOk,$conditionId)
 	{
 		$toInsert = (object)
 		[
@@ -49,6 +49,24 @@ class FormalizeQueryToCall
 			"percentualOk" => $percentualOk,
 			"conditionId" => $conditionId
 		];
-		return $this->connection->execyte(new InsertGoal,$toInsert);
+		return $this->connection->execute(new InsertGoal,$toInsert);
+	}
+	public function insertGoalMission($goalId,$missionId)
+	{
+		$toInsert = (object)
+		[
+			"goalId" => $goalId,
+			"missionId" => $missionId
+ 		];
+		return $this->connection->execute(new InsertGoalMission,$toInsert);
+	}
+	public function insertMissionRole($missionName,$roleName)
+	{
+		$toInsert = (object)
+		[
+			"missionName" => $missionName,
+			"roleName" => $roleName
+		];
+		return $this->connection->execute(new InsertMissionRole,$toInsert);
 	}
 }

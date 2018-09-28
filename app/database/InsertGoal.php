@@ -8,7 +8,7 @@ class InsertGoal implements OperatorDbInterface
 	{
 		$description = $objectBank->description;
 		$probability = $objectBank->probability;
-		$percentualOk = $objectBanl->percentual_ok;
+		$percentualOk = $objectBank->percentualOk;
 		$conditionId = $objectBank->conditionId;
 		$sql = "insert into goal (description,probability,percentual_ok,condition_id) values ('$description',$probability,$percentualOk,$conditionId)";
 		$connection->exec($sql);	
