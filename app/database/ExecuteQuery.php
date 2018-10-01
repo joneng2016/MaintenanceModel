@@ -355,7 +355,130 @@ class ExecuteQuery
 		];
 		foreach($goalMissions as $goalMission)
 			$f->insertGoalMission($goalMission[1],$goalMission[0]);
- */
-		echo $f->insertMissionRole('missao00','executor01');
+		
+		$f->insertMissionRole('missao00','executor01');
+	 
+		$inserts = 
+		[
+			'missao01-01',
+			'missao02',
+			'missao03',
+			'missao07',
+			'missao08',
+			'missao09',
+			'missao10',
+			'missao11'
+		];
+		foreach($inserts as $insert)
+			$f->insertMissionRole($insert,'executor01');
+	
+		$inserts = 
+		[
+			'missao00',
+			'missao01-01',
+			'missao01-06',
+			'missao02',
+			'missao03',
+			'missao07',
+			'missao08',
+			'missao09',
+			'missao11'
+		];
+		foreach($inserts as $insert)
+			$f->insertMissionRole($insert,'executor02');		
+
+		$inserts = 
+		[
+			'missao00',
+			'missao01-01',
+			'missao01-06',
+			'missao02',
+			'missao03',
+			'missao04',
+			'missao05',
+			'missao08',
+			'missao09',
+			'missao11'
+		];
+		foreach($inserts as $insert)
+			$f->insertMissionRole($insert,'executor03');
+
+
+		$inserts = 
+		[
+			'missao00',
+			'missao01-02',
+			'missao02',
+			'missao03',
+			'missao04',
+			'missao05',
+			'missao08',
+			'missao09',
+			'missao11'
+		];
+		foreach($inserts as $insert)
+			$f->insertMissionRole($insert,'executor04');
+
+
+		$inserts = 
+		[
+			'missao00',
+			'missao01-03',
+			'missao02',
+			'missao04',
+			'missao05',
+			'missao08',
+			'missao09',
+			'missao11'
+		];
+		foreach($inserts as $insert)
+			$f->insertMissionRole($insert,'executor05');
+
+
+		$inserts = 
+		[
+			'missao00',
+			'missao01-04',
+			'missao02',
+			'missao06',
+			'missao07',
+			'missao08',
+			'missao09',
+			'missao11'
+		];
+		foreach($inserts as $insert)
+			$f->insertMissionRole($insert,'executor06');
+
+
+		$inserts = 
+		[
+			'missao00',
+			'missao01-05',
+			'missao02',
+			'missao06',
+			'missao07',
+			'missao08',
+			'missao09',
+			'missao11'
+		];
+		foreach($inserts as $insert)
+			$f->insertMissionRole($insert,'executor07');
+
+		$inserts = 
+		[
+			'missao10'
+		];
+		foreach($inserts as $insert)
+			$f->insertMissionRole($insert,'supervisor');
+
+		$inserts = 
+		[
+			'missao11'
+		];
+		foreach($inserts as $insert)
+			$f->insertMissionRole($insert,'observador');
+
+*/
+
 	}
 }

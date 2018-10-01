@@ -17,5 +17,8 @@ class InsertMissionRole implements OperatorDbInterface
 		$select->execute();
 		$results = $select->fetch();
 		$roleId = $results['id'];	
+
+		$sql = "insert into deontic_relation (role_id,mission_id,type) values ($roleId,$missionId,'OBLIGATION-PERMISSION')";
+		$connection->exec($sql);	
 	}
 }
