@@ -478,7 +478,12 @@ class ExecuteQuery
 		foreach($inserts as $insert)
 			$f->insertMissionRole($insert,'observador');
 
-*/
+		var_dump($f->selectGoaByCondition('cavalete'));
+		$f->insertChangeGoal('cavalete',95);
+ */
+		$f->insertRisk('one');
+		echo $f->insertGoupSafetyRisk('one','virus');
+	
 
 	}
 }

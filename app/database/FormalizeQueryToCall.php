@@ -69,4 +69,39 @@ class FormalizeQueryToCall
 		];
 		return $this->connection->execute(new InsertMissionRole,$toInsert);
 	}
+	public function selectGoaByCondition($conditionName)
+	{
+		$toInsert = (object)
+		[
+			"conditionName" => $conditionName
+		];
+		return $this->connection->execute(new SelectGoalByCondition,$toInsert);
+	}
+	public function insertChangeGoal($nameCondition,$probability)
+	{
+		$toInsert = (object) 
+		[
+			"conditionName" => $nameCondition,
+			"probability" => $probability
+		];
+		return $this->connection->execute(new InsertChangeGoal,$toInsert);
+	}
+	public function insertRisk($name)
+	{
+		$toInsert = (object) 
+		[
+			"name" => $name,
+		];
+		return $this->connection->execute(new InsertRisk,$toInsert);
+	}
+	public function insertGoupSafetyRisk($riskName,$groupDescription)
+	{
+		$toInsert = (object)
+		[
+			"riskName" => $riskName,
+			"groupDescription" => $groupDescription
+		];
+		return $this->connection->execute(new InsertGroupSafetyRisk,$toInsert);
+
+	}
 }
