@@ -7,6 +7,7 @@ class ExecuteQuery
 	public function __construct()
 	{
 		$this->formalize = new FormalizeQueryToCall;
+		$this->sequenceInsertSanction = new SequenceInsertSanction;
 	}	
 	public function run()
 	{
@@ -480,10 +481,25 @@ class ExecuteQuery
 
 		var_dump($f->selectGoaByCondition('cavalete'));
 		$f->insertChangeGoal('cavalete',95);
- */
 		$f->insertRisk('one');
 		echo $f->insertGoupSafetyRisk('one','virus');
 	
-
+		echo $f->insertShortConsequence('one',1);
+ 		$f->insertShortConsequence('one',100);
+		$f->insertChangeGoal('cavalete',95);
+ 		$f->insertSanction(1,3);
+		$f->insertEntityFatality(1,'estopo',"CAUSER");
+		$f->insertConditionSanction('analize_preliminar_risco',2);
+		$longId = $f->insertChangeGoal('sinalizacao',50);
+		$f->insertChangeGoalLongExist('rasga-corda-pedacos',50,$longId);
+ */
+		$longId = $f->insertChangeGoal('teste-impedancia-corda',50);
+		$f->insertChangeGoalLongExist('fixar-bastao-garra-colar-sela',50,$longId);
+		$f->insertChangeGoalLongExist('fixar-bastao-garra-lado-1-condutor',50,$longId);
+		$f->insertRisk('risco01');
+		$shortId = $f->insertShortConsequence('risco01',10);
+		$sanctionId = $f->insertSanction($shortId,$longId);
+		$f->insertConditionSanction('sinalizacao',$sanctionId);
+	
 	}
 }

@@ -3,7 +3,7 @@
 namespace App\DB;
 
 
-class InsertChangeGoal implements OperatorDbInterface
+class InsertChangeGoalLongExist implements OperatorDbInterface
 {	  
 	public function execute($connection,$objectBank,&$returnInformation)
 	{
@@ -12,12 +12,8 @@ class InsertChangeGoal implements OperatorDbInterface
 			"conditionName" => $objectBank->conditionName
 		];
 		$goalId =  (new \App\DB\ConnectionDb('localhost','root','','maintenanceliveline'))->execute(new SelectGoalByCondition,$toInsert);
-		$connection->exec("insert into long_consequence () values ()");
-		$longId = $connection->lastInsertId();
-		$sql = "insert into change_goal (probability,goal_id,long_id) VALUES ($objectBank->probability,$goalId,$longId)"; 
+		$sql = "insert into change_goal (probability,goal_id,long_id) VALUES ($objectBank->probability,$goalId,$objectBank->longId)"; 
 		$connection->exec($sql);		
-
-		$returnInformation = $longId;
 
 	}
 }

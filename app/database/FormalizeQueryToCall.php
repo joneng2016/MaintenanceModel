@@ -86,6 +86,16 @@ class FormalizeQueryToCall
 		];
 		return $this->connection->execute(new InsertChangeGoal,$toInsert);
 	}
+	public function insertChangeGoalLongExist($nameCondition,$probability,$longId)
+	{
+		$toInsert = (object) 
+		[
+			"conditionName" => $nameCondition,
+			"probability" => $probability,
+			"longId" => $longId
+		];
+		return $this->connection->execute(new InsertChangeGoalLongExist,$toInsert);
+	}	
 	public function insertRisk($name)
 	{
 		$toInsert = (object) 
@@ -103,5 +113,42 @@ class FormalizeQueryToCall
 		];
 		return $this->connection->execute(new InsertGroupSafetyRisk,$toInsert);
 
+	}
+	public function insertShortConsequence($riskName,$fatalityCondition)
+	{
+		$toInsert = (object)
+		[
+			"riskName" => $riskName,
+			"fatalityCondition" => $fatalityCondition
+		];
+		return $this->connection->execute(new InsertShortConsequence,$toInsert);
+	}
+	public function insertSanction($shortConsequenceId,$longConsequenceId)
+	{
+		$toInsert = (object)
+		[
+			"shortConsequence" => $shortConsequenceId,
+			"longConsequence" => $longConsequenceId
+		];
+		return $this->connection->execute(new InsertSanction,$toInsert);
+	}
+	public function insertEntityFatality($shortConsequenceId,$entityName,$type)
+	{
+		$toInsert = (object)
+		[
+			"shortConsequenceId" => $shortConsequenceId,
+			"entityName" => $entityName,
+			"type" => $type
+ 		];
+		return $this->connection->execute(new InsertEntityFatality,$toInsert);
+	}
+	public function insertConditionSanction($conditionName,$sanctionId)
+	{
+		$toInsert = (object)
+		[
+			"conditionName" => $conditionName,
+			"sanctionId" => $sanctionId
+		];
+		return $this->connection->execute(new InsertConditionSanction,$toInsert);
 	}
 }
