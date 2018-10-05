@@ -306,8 +306,6 @@ class ExecuteQuery
 			$f->insertGoal($toInsert[0],$toInsert[1],$toInsert[2],$toInsert[3]);
 
 
-		 */
-/*
 		$goalMissions = 
 		[
 			[26,59],
@@ -492,7 +490,7 @@ class ExecuteQuery
 		$f->insertConditionSanction('analize_preliminar_risco',2);
 		$longId = $f->insertChangeGoal('sinalizacao',50);
 		$f->insertChangeGoalLongExist('rasga-corda-pedacos',50,$longId);
- */
+
 		$longId = $f->insertChangeGoal('teste-impedancia-corda',50);
 		$f->insertChangeGoalLongExist('fixar-bastao-garra-colar-sela',50,$longId);
 		$f->insertChangeGoalLongExist('fixar-bastao-garra-lado-1-condutor',50,$longId);
@@ -500,6 +498,488 @@ class ExecuteQuery
 		$shortId = $f->insertShortConsequence('risco01',10);
 		$sanctionId = $f->insertSanction($shortId,$longId);
 		$f->insertConditionSanction('sinalizacao',$sanctionId);
+
+		$goals  =
+		[
+			"procedimentos-iniciais",
+			"sinalizacao",
+			"cavalete",
+			"limpar-ferramenta",
+			"medicao-corrente-fulga-inicio-manutencao",
+			"medicao-corrente-fulga-durante-manutencao",
+			"medicao-corrente-fulga-final-operacao",
+			"posicionamento-cavalete",
+			"procedimentos-corda-manutencao-carretilha",
+			"verificar-corda-limpa",
+			"teste-impedancia-corda",
+			"rasga-corda-pedacos",
+			"interpolar-corda-bastao-universal",
+			"fixar-carretilha-corda-bastao-universal",
+			"instalar-sela-corda-lado-1",
+			"fixar-bastao-garra-colar-sela",
+			"fixar-bastao-garra-lado-1-condutor",
+			"instalar-sela-colar-coluna-lado-2",
+			"fixar-bastao-garra-invertido-lado-2",
+			"fixar-carretilha-corda-fibra-sintetica-ponta-bastao",
+			"girar-sela-erguer-bastao",
+			"enforcar-estopo-alto-isolador",
+			"conectar-corda-estop",
+			"operacao-isolador-pedestal",
+			"bastao-universal-chave-catraca-saltar-parafusos",
+			"retirar-parafuso-cima",
+			"finalizar-troca-isolador-pedestal",
+			"tencionar-corda-estopo",
+			"tirar-parafusos-baixo-isolador-chave-catraca",
+			"passar-corda-base-isolador-chave-catraca",
+			"corda-erguer-isolador",
+			"retirar-isolador-antigo",
+			"estopo-isolador",
+			"suspender-isolador",
+			"engate-corda-guia",
+			"icar-isolador",
+			"parafusar-isolador-coluna-chave-catraca",
+			"fechar-conector-bastao-universal",
+			"desconectar-batao-garra-conector",
+			"retirar-bastao-garra",
+			"retirar-sela-colar-bastao-garra-lado-1",
+			"retirar-estopo-isolador",
+			"retirar-sela-colar-bastao-garra-lado-2",
+			"recolher-equipamento",
+			"metodo-a-distancia",
+			"observacao",
+			"objetivo-final",
+			"etapas-metodologicas",
+			"metodo-finalizado"
+		];
+
+		$longId = $f->insertChangeGoal("analize_preliminar_risco",75);
+		foreach($goals as $goal)
+			$f->insertChangeGoalLongExist($goal,75,$longId);
+		$sanctionId = $f->insertSanction('null',$longId);
+		$f->insertConditionSanction('supervisao',$sanctionId);
+ 
+		$goals  =
+		[
+			"analize_preliminar_risco",
+			"procedimentos-iniciais",
+			"sinalizacao",
+			"cavalete",
+			"limpar-ferramenta",
+			"medicao-corrente-fulga-inicio-manutencao",
+			"medicao-corrente-fulga-durante-manutencao",
+			"medicao-corrente-fulga-final-operacao",
+			"posicionamento-cavalete",
+			"procedimentos-corda-manutencao-carretilha",
+			"verificar-corda-limpa",
+			"teste-impedancia-corda",
+			"rasga-corda-pedacos",
+			"interpolar-corda-bastao-universal",
+			"fixar-carretilha-corda-bastao-universal",
+			"instalar-sela-corda-lado-1",
+			"fixar-bastao-garra-colar-sela",
+			"fixar-bastao-garra-lado-1-condutor",
+			"instalar-sela-colar-coluna-lado-2",
+			"fixar-bastao-garra-invertido-lado-2",
+			"fixar-carretilha-corda-fibra-sintetica-ponta-bastao",
+			"girar-sela-erguer-bastao",
+			"enforcar-estopo-alto-isolador",
+			"conectar-corda-estop",
+			"operacao-isolador-pedestal",
+			"bastao-universal-chave-catraca-saltar-parafusos",
+			"retirar-parafuso-cima",
+			"finalizar-troca-isolador-pedestal",
+			"tencionar-corda-estopo",
+			"tirar-parafusos-baixo-isolador-chave-catraca",
+			"passar-corda-base-isolador-chave-catraca",
+			"corda-erguer-isolador",
+			"retirar-isolador-antigo",
+			"estopo-isolador",
+			"suspender-isolador",
+			"engate-corda-guia",
+			"icar-isolador",
+			"parafusar-isolador-coluna-chave-catraca",
+			"fechar-conector-bastao-universal",
+			"desconectar-batao-garra-conector",
+			"retirar-bastao-garra",
+			"retirar-sela-colar-bastao-garra-lado-1",
+			"retirar-estopo-isolador",
+			"retirar-sela-colar-bastao-garra-lado-2",
+			"recolher-equipamento",
+			"metodo-a-distancia",
+			"observacao",
+			"objetivo-final",
+			"etapas-metodologicas",
+			"metodo-finalizado"
+		];
 	
+		
+		foreach($goals as $goal)
+		{
+			$longId = $f->insertChangeGoal($goal,75);
+			$sanctionId = $f->insertSanction('null',$longId);
+			$f->insertConditionSanction('supervisao',$sanctionId);
+		}
+
+		$goals  =
+		[
+			"analize_preliminar_risco",
+			"procedimentos-iniciais",
+			"sinalizacao",
+			"cavalete",
+			"limpar-ferramenta",
+			"medicao-corrente-fulga-inicio-manutencao",
+			"medicao-corrente-fulga-durante-manutencao",
+			"medicao-corrente-fulga-final-operacao",
+			"posicionamento-cavalete",
+			"procedimentos-corda-manutencao-carretilha",
+			"verificar-corda-limpa",
+			"teste-impedancia-corda",
+			"rasga-corda-pedacos",
+			"interpolar-corda-bastao-universal",
+			"fixar-carretilha-corda-bastao-universal",
+			"instalar-sela-corda-lado-1",
+			"fixar-bastao-garra-colar-sela",
+			"fixar-bastao-garra-lado-1-condutor",
+			"instalar-sela-colar-coluna-lado-2",
+			"fixar-bastao-garra-invertido-lado-2",
+			"fixar-carretilha-corda-fibra-sintetica-ponta-bastao",
+			"girar-sela-erguer-bastao",
+			"enforcar-estopo-alto-isolador",
+			"conectar-corda-estop",
+			"operacao-isolador-pedestal",
+			"bastao-universal-chave-catraca-saltar-parafusos",
+			"retirar-parafuso-cima",
+			"finalizar-troca-isolador-pedestal",
+			"tencionar-corda-estopo",
+			"tirar-parafusos-baixo-isolador-chave-catraca",
+			"passar-corda-base-isolador-chave-catraca",
+			"corda-erguer-isolador",
+			"retirar-isolador-antigo",
+			"estopo-isolador",
+			"suspender-isolador",
+			"engate-corda-guia",
+			"icar-isolador",
+			"parafusar-isolador-coluna-chave-catraca",
+			"fechar-conector-bastao-universal",
+			"desconectar-batao-garra-conector",
+			"retirar-bastao-garra",
+			"retirar-sela-colar-bastao-garra-lado-1",
+			"retirar-estopo-isolador",
+			"retirar-sela-colar-bastao-garra-lado-2",
+			"recolher-equipamento",
+			"metodo-a-distancia",
+			"supervisao",
+			"observacao"
+			"objetivo-final",
+			"etapas-metodologicas",
+			"metodo-finalizado"
+		];
+	
+		
+		foreach($goals as $goal)
+		{
+			$longId = $f->insertChangeGoal($goal,75);
+			$sanctionId = $f->insertSanction('null',$longId);
+			$f->insertConditionSanction('observacao',$sanctionId);
+		}
+
+		$goals  =
+		[
+			"procedimentos-iniciais",
+			"sinalizacao",
+			"cavalete",
+			"limpar-ferramenta",
+			"medicao-corrente-fulga-inicio-manutencao",
+			"medicao-corrente-fulga-durante-manutencao",
+			"medicao-corrente-fulga-final-operacao",
+			"posicionamento-cavalete",
+			"procedimentos-corda-manutencao-carretilha",
+			"verificar-corda-limpa",
+			"teste-impedancia-corda",
+			"rasga-corda-pedacos",
+			"interpolar-corda-bastao-universal",
+			"fixar-carretilha-corda-bastao-universal",
+			"instalar-sela-corda-lado-1",
+			"fixar-bastao-garra-colar-sela",
+			"fixar-bastao-garra-lado-1-condutor",
+			"instalar-sela-colar-coluna-lado-2",
+			"fixar-bastao-garra-invertido-lado-2",
+			"fixar-carretilha-corda-fibra-sintetica-ponta-bastao",
+			"girar-sela-erguer-bastao",
+			"enforcar-estopo-alto-isolador",
+			"conectar-corda-estop",
+			"operacao-isolador-pedestal",
+			"bastao-universal-chave-catraca-saltar-parafusos",
+			"retirar-parafuso-cima",
+			"finalizar-troca-isolador-pedestal",
+			"tencionar-corda-estopo",
+			"tirar-parafusos-baixo-isolador-chave-catraca",
+			"passar-corda-base-isolador-chave-catraca",
+			"corda-erguer-isolador",
+			"retirar-isolador-antigo",
+			"estopo-isolador",
+			"suspender-isolador",
+			"engate-corda-guia",
+			"icar-isolador",
+			"parafusar-isolador-coluna-chave-catraca",
+			"fechar-conector-bastao-universal",
+			"desconectar-batao-garra-conector",
+			"retirar-bastao-garra",
+			"retirar-sela-colar-bastao-garra-lado-1",
+			"retirar-estopo-isolador",
+			"retirar-sela-colar-bastao-garra-lado-2",
+			"recolher-equipamento",
+			"metodo-a-distancia",
+			"supervisao",
+			"observacao",
+			"objetivo-final",
+			"etapas-metodologicas",
+			"metodo-finalizado"
+		];
+	
+		
+		foreach($goals as $goal)
+		{
+			$longId = $f->insertChangeGoal($goal,75);
+			$sanctionId = $f->insertSanction('null',$longId);
+			$f->insertConditionSanction("analize_preliminar_risco",$sanctionId);
+		}
+
+		$goals  =
+		[
+			"analize_preliminar_risco",
+			"sinalizacao",
+			"cavalete",
+			"limpar-ferramenta",
+			"medicao-corrente-fulga-inicio-manutencao",
+			"medicao-corrente-fulga-durante-manutencao",
+			"medicao-corrente-fulga-final-operacao",
+			"posicionamento-cavalete",
+			"procedimentos-corda-manutencao-carretilha",
+			"verificar-corda-limpa",
+			"teste-impedancia-corda",
+			"rasga-corda-pedacos",
+			"interpolar-corda-bastao-universal",
+			"fixar-carretilha-corda-bastao-universal",
+			"instalar-sela-corda-lado-1",
+			"fixar-bastao-garra-colar-sela",
+			"fixar-bastao-garra-lado-1-condutor",
+			"instalar-sela-colar-coluna-lado-2",
+			"fixar-bastao-garra-invertido-lado-2",
+			"fixar-carretilha-corda-fibra-sintetica-ponta-bastao",
+			"girar-sela-erguer-bastao",
+			"enforcar-estopo-alto-isolador",
+			"conectar-corda-estop",
+			"operacao-isolador-pedestal",
+			"bastao-universal-chave-catraca-saltar-parafusos",
+			"retirar-parafuso-cima",
+			"finalizar-troca-isolador-pedestal",
+			"tencionar-corda-estopo",
+			"tirar-parafusos-baixo-isolador-chave-catraca",
+			"passar-corda-base-isolador-chave-catraca",
+			"corda-erguer-isolador",
+			"retirar-isolador-antigo",
+			"estopo-isolador",
+			"suspender-isolador",
+			"engate-corda-guia",
+			"icar-isolador",
+			"parafusar-isolador-coluna-chave-catraca",
+			"fechar-conector-bastao-universal",
+			"desconectar-batao-garra-conector",
+			"retirar-bastao-garra",
+			"retirar-sela-colar-bastao-garra-lado-1",
+			"retirar-estopo-isolador",
+			"retirar-sela-colar-bastao-garra-lado-2",
+			"recolher-equipamento",
+			"metodo-a-distancia",
+			"supervisao",
+			"observacao",
+			"objetivo-final",
+			"etapas-metodologicas",
+			"metodo-finalizado"
+		];
+	
+		
+		foreach($goals as $goal)
+		{
+			$longId = $f->insertChangeGoal($goal,75);
+			$sanctionId = $f->insertSanction('null',$longId);
+			$f->insertConditionSanction("procedimentos-iniciais",$sanctionId);
+		}		
+
+		$goals  =
+		[
+			"cavalete",
+			"limpar-ferramenta",
+			"medicao-corrente-fulga-inicio-manutencao",
+			"medicao-corrente-fulga-durante-manutencao",
+			"medicao-corrente-fulga-final-operacao",
+			"posicionamento-cavalete",
+			"procedimentos-corda-manutencao-carretilha",
+			"verificar-corda-limpa",
+			"teste-impedancia-corda",
+			"rasga-corda-pedacos",
+			"interpolar-corda-bastao-universal",
+			"fixar-carretilha-corda-bastao-universal",
+			"instalar-sela-corda-lado-1",
+			"fixar-bastao-garra-colar-sela",
+			"fixar-bastao-garra-lado-1-condutor",
+			"instalar-sela-colar-coluna-lado-2",
+			"fixar-bastao-garra-invertido-lado-2",
+			"fixar-carretilha-corda-fibra-sintetica-ponta-bastao",
+			"girar-sela-erguer-bastao",
+			"enforcar-estopo-alto-isolador",
+			"conectar-corda-estop",
+			"operacao-isolador-pedestal",
+			"bastao-universal-chave-catraca-saltar-parafusos",
+			"retirar-parafuso-cima",
+			"finalizar-troca-isolador-pedestal",
+			"tencionar-corda-estopo",
+			"tirar-parafusos-baixo-isolador-chave-catraca",
+			"passar-corda-base-isolador-chave-catraca",
+			"corda-erguer-isolador",
+			"retirar-isolador-antigo",
+			"estopo-isolador",
+			"suspender-isolador",
+			"engate-corda-guia",
+			"icar-isolador",
+			"parafusar-isolador-coluna-chave-catraca",
+			"fechar-conector-bastao-universal",
+			"desconectar-batao-garra-conector",
+			"retirar-bastao-garra",
+			"retirar-sela-colar-bastao-garra-lado-1",
+			"retirar-estopo-isolador",
+			"retirar-sela-colar-bastao-garra-lado-2",
+			"recolher-equipamento",
+			"metodo-a-distancia",
+			"supervisao",
+			"observacao",
+			"objetivo-final",
+			"etapas-metodologicas",
+			"metodo-finalizado"
+		];
+	
+		
+		foreach($goals as $goal)
+		{
+			$longId = $f->insertChangeGoal($goal,85);
+			$sanctionId = $f->insertSanction('null',$longId);
+			$f->insertConditionSanction("sinalizacao",$sanctionId);
+		}
+		
+
+		$longId = $f->insertChangeGoal('teste-impedancia-corda',50);
+		$f->insertChangeGoalLongExist('limpar-ferramenta',50,$longId);
+		$f->insertChangeGoalLongExist('fixar-bastao-garra-colar-sela',50,$longId);
+		$f->insertChangeGoalLongExist('fixar-bastao-garra-lado-1-condutor',50,$longId);	
+		$f->insertChangeGoalLongExist('fixar-bastao-garra-invertido-lado-2',50,$longId);		
+		$f->insertChangeGoalLongExist('fixar-carretilha-corda-fibra-sintetica-ponta-bastao',50,$longId);								
+		$sanctionId = $f->insertSanction("null",$longId);
+		$f->insertConditionSanction('cavalete',$sanctionId);
+
+		$longId = $f->insertChangeGoal('fixar-bastao-garra-lado-1-condutor',50);
+		$f->insertChangeGoalLongExist('parafusar-isolador-coluna-chave-catraca',50,$longId);
+		$f->insertChangeGoalLongExist('desconectar-batao-garra-conector',50,$longId);
+		$f->insertChangeGoalLongExist('bastao-universal-chave-catraca-saltar-parafusos',50,$longId);	
+		$f->insertChangeGoalLongExist('retirar-parafuso-cima',50,$longId);									
+		$sanctionId = $f->insertSanction("null",$longId);
+		$f->insertConditionSanction('limpar-ferramenta',$sanctionId);
+
+		$longId = $f->insertChangeGoal('fixar-bastao-garra-lado-1-condutor',50);
+		$f->insertChangeGoalLongExist('parafusar-isolador-coluna-chave-catraca',50,$longId);
+		$f->insertChangeGoalLongExist('desconectar-batao-garra-conector',50,$longId);
+		$f->insertChangeGoalLongExist('bastao-universal-chave-catraca-saltar-parafusos',50,$longId);	
+		$f->insertChangeGoalLongExist('retirar-parafuso-cima',50,$longId);									
+		$sanctionId = $f->insertSanction("null",$longId);
+		$f->insertConditionSanction('medicao-corrente-fulga-durante-manutencao',$sanctionId);
+
+		$longId = $f->insertChangeGoal('fixar-bastao-garra-lado-1-condutor',50);
+		$f->insertChangeGoalLongExist('parafusar-isolador-coluna-chave-catraca',50,$longId);
+		$f->insertChangeGoalLongExist('desconectar-batao-garra-conector',50,$longId);
+		$f->insertChangeGoalLongExist('bastao-universal-chave-catraca-saltar-parafusos',50,$longId);	
+		$f->insertChangeGoalLongExist('retirar-parafuso-cima',50,$longId);									
+		$sanctionId = $f->insertSanction("null",$longId);
+		$f->insertConditionSanction('posicionamento-cavalete',$sanctionId);
+
+		$longId = $f->insertChangeGoal('girar-sela-erguer-bastao',50);
+		$f->insertChangeGoalLongExist('tencionar-corda-estopo',50,$longId);
+		$f->insertChangeGoalLongExist('passar-corda-base-isolador-chave-catraca',50,$longId);
+		$f->insertChangeGoalLongExist('icar-isolador',50,$longId);	
+		$f->insertChangeGoalLongExist('retirar-parafuso-cima',50,$longId);
+		$f->insertChangeGoalLongExist('retirar-estopo-isolador',50,$longId);
+		$f->insertChangeGoalLongExist('retirar-sela-colar-bastao-garra-lado-2',50,$longId);
+		$sanctionId = $f->insertSanction("null",$longId);
+		$f->insertConditionSanction('verificar-corda-limpa',$sanctionId);		
+
+		$longId = $f->insertChangeGoal('girar-sela-erguer-bastao',50);
+		$f->insertChangeGoalLongExist('tencionar-corda-estopo',50,$longId);
+		$f->insertChangeGoalLongExist('passar-corda-base-isolador-chave-catraca',50,$longId);
+		$f->insertChangeGoalLongExist('icar-isolador',50,$longId);	
+		$f->insertChangeGoalLongExist('retirar-parafuso-cima',50,$longId);
+		$f->insertChangeGoalLongExist('retirar-estopo-isolador',50,$longId);
+		$f->insertChangeGoalLongExist('retirar-sela-colar-bastao-garra-lado-2',50,$longId);
+		$sanctionId = $f->insertSanction("null",$longId);
+		$f->insertConditionSanction('teste-impedancia-corda',$sanctionId);	
+
+		$longId = $f->insertChangeGoal('girar-sela-erguer-bastao',50);
+		$f->insertChangeGoalLongExist('tencionar-corda-estopo',50,$longId);
+		$f->insertChangeGoalLongExist('passar-corda-base-isolador-chave-catraca',50,$longId);
+		$f->insertChangeGoalLongExist('icar-isolador',50,$longId);	
+		$f->insertChangeGoalLongExist('retirar-parafuso-cima',50,$longId);
+		$f->insertChangeGoalLongExist('retirar-estopo-isolador',50,$longId);
+		$f->insertChangeGoalLongExist('retirar-sela-colar-bastao-garra-lado-2',50,$longId);
+		$sanctionId = $f->insertSanction("null",$longId);
+		$f->insertConditionSanction('rasga-corda-pedacos',$sanctionId);			
+
+		$longId = $f->insertChangeGoal('girar-sela-erguer-bastao',50);
+		$f->insertChangeGoalLongExist('tencionar-corda-estopo',50,$longId);
+		$f->insertChangeGoalLongExist('passar-corda-base-isolador-chave-catraca',50,$longId);
+		$f->insertChangeGoalLongExist('icar-isolador',50,$longId);	
+		$f->insertChangeGoalLongExist('retirar-parafuso-cima',50,$longId);
+		$f->insertChangeGoalLongExist('retirar-estopo-isolador',50,$longId);
+		$f->insertChangeGoalLongExist('retirar-sela-colar-bastao-garra-lado-2',50,$longId);
+		$sanctionId = $f->insertSanction("null",$longId);
+		$f->insertConditionSanction('interpolar-corda-bastao-universal',$sanctionId);			
+
+		foreach($goals as $goal)
+		{
+			$longId = $f->insertChangeGoal($goal,85);
+			$sanctionId = $f->insertSanction('null',$longId);
+			$f->insertConditionSanction("sinalizacao",$sanctionId);
+		}	
+		$longId = $f->insertChangeGoal('girar-sela-erguer-bastao',50);
+		$f->insertChangeGoalLongExist('tencionar-corda-estopo',50,$longId);
+		$f->insertChangeGoalLongExist('passar-corda-base-isolador-chave-catraca',50,$longId);
+		$f->insertChangeGoalLongExist('icar-isolador',50,$longId);	
+		$f->insertChangeGoalLongExist('retirar-parafuso-cima',50,$longId);
+		$f->insertChangeGoalLongExist('retirar-estopo-isolador',50,$longId);
+		$f->insertChangeGoalLongExist('retirar-sela-colar-bastao-garra-lado-2',50,$longId);
+		$sanctionId = $f->insertSanction("null",$longId);
+		$f->insertConditionSanction('fixar-carretilha-corda-bastao-universal',$sanctionId);			
+
+		$longId = $f->insertChangeGoal('fixar-bastao-garra-colar-sela',0);
+		$f->insertChangeGoalLongExist('fixar-carretilha-corda-fibra-sintetica-ponta-bastao',0,$longId);
+		$f->insertChangeGoalLongExist('girar-sela-erguer-bastao',0,$longId);
+		$f->insertRisk('riskFixarBastaoGarraColarSela');
+		$f->insertGoupSafetyRisk('riskFixarBastaoGarraColarSela','risco_ergonimico');				
+		$shortId = $f->insertShortConsequence('riskFixarBastaoGarraColarSela',0);
+		$sanctionId = $f->insertSanction($shortId,$longId);
+		$f->insertConditionSanction('instalar-sela-corda-lado-1',$sanctionId);
+
+		$longId = $f->insertChangeGoal('fixar-bastao-garra-colar-sela',0);
+		$f->insertChangeGoalLongExist('fixar-carretilha-corda-fibra-sintetica-ponta-bastao',0,$longId);
+		$f->insertChangeGoalLongExist('girar-sela-erguer-bastao',0,$longId);
+		$f->insertChangeGoalLongExist('enforcar-estopo-alto-isolador',0,$longId);
+		$f->insertChangeGoalLongExist('enforcar-estopo-alto-isolador',0,$longId);
+
+		
+		$f->insertRisk('riskBataoGarraLado1Condutor');
+		$f->insertGoupSafetyRisk('riskFixarBastaoGarraColarSela','risco_ergonimico');				
+		$shortId = $f->insertShortConsequence('riskFixarBastaoGarraColarSela',0);
+		
+		$sanctionId = $f->insertSanction($shortId,$longId);
+		$f->insertConditionSanction('fixar-bastao-garra-lado-1-condutor',$sanctionId);	
+*/	
+
 	}
 }
