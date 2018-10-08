@@ -978,8 +978,105 @@ class ExecuteQuery
 		$shortId = $f->insertShortConsequence('riskFixarBastaoGarraColarSela',0);
 		
 		$sanctionId = $f->insertSanction($shortId,$longId);
-		$f->insertConditionSanction('fixar-bastao-garra-lado-1-condutor',$sanctionId);	
-*/	
+		$f->insertConditionSanction('fixar-bastao-garra-lado-1-condutor',$sactionId);	
+		$longId = $f->insertChangeGoal('fixar-bastao-garra-invertido-lado-2',0);
+		$f->insertChangeGoalLongExist('fixar-carretilha-corda-fibra-sintetica-ponta-bastao',0,$longId);
+		$f->insertChangeGoalLongExist('girar-sela-erguer-bastao',0,$longId);
+		$f->insertChangeGoalLongExist('retirar-isolador-antigo',0,$longId);
+		$f->insertChangeGoalLongExist('icar-isolador',0,$longId);
+		
+		
+		$f->insertRisk('risKInstalarSelaColarColunaLado2');
+		$f->insertGoupSafetyRisk('risKInstalarSelaColarColunaLado2','risco_ergonimico');
+		$f->insertGoupSafetyRisk('risKInstalarSelaColarColunaLado2','radiacao_nao_ionizante');
+		$f->insertGoupSafetyRisk('risKInstalarSelaColarColunaLado2','eletricidade');
+		$f->insertGoupSafetyRisk('risKInstalarSelaColarColunaLado2','probabilidade_incendio_explosao');
+		$f->insertGoupSafetyRisk('risKInstalarSelaColarColunaLado2','animais_peconhentos');	
 
+		$shortId = $f->insertShortConsequence('risKInstalarSelaColarColunaLado2',0);		
+
+		$sanctionId = $f->insertSanction(6,278);
+		$f->insertConditionSanction('instalar-sela-colar-coluna-lado-2',$sanctionId);	
+
+
+		$longId = $f->insertChangeGoal('fixar-carretilha-corda-fibra-sintetica-ponta-bastao',50);
+		$f->insertChangeGoalLongExist('girar-sela-erguer-bastao',50,$longId);
+		$f->insertChangeGoalLongExist('tencionar-corda-estopo',50,$longId);
+		$f->insertChangeGoalLongExist('retirar-isolador-antigo',50,$longId);	
+
+		$f->insertRisk('risKInstalarSelaColarColunaLado2');
+		$f->insertGoupSafetyRisk('risKInstalarSelaColarColunaLado2','risco_ergonimico');
+		$f->insertGoupSafetyRisk('risKInstalarSelaColarColunaLado2','radiacao_nao_ionizante');
+		$f->insertGoupSafetyRisk('risKInstalarSelaColarColunaLado2','eletricidade');
+		$f->insertGoupSafetyRisk('risKInstalarSelaColarColunaLado2','probabilidade_incendio_explosao');
+		$f->insertGoupSafetyRisk('risKInstalarSelaColarColunaLado2','animais_peconhentos');	
+
+		$shortId = $f->insertShortConsequence('risKInstalarSelaColarColunaLado2',0);
+		$sanctionId = $f->insertSanction($shortId,$longId);
+		$f->insertConditionSanction('fixar-bastao-garra-invertido-lado-2',$sanctionId);			
+
+		$longId = $f->insertChangeGoal('girar-sela-erguer-bastao',50);
+		$f->insertChangeGoalLongExist('tencionar-corda-estopo',50,$longId);
+		$f->insertChangeGoalLongExist('retirar-isolador-antigo',50,$longId);	
+
+		$f->insertRisk('risKInstalarSelaColarColunaLado2');
+		$f->insertGoupSafetyRisk('risKInstalarSelaColarColunaLado2','risco_ergonimico');
+		$f->insertGoupSafetyRisk('risKInstalarSelaColarColunaLado2','radiacao_nao_ionizante');
+		$f->insertGoupSafetyRisk('risKInstalarSelaColarColunaLado2','eletricidade');
+		$f->insertGoupSafetyRisk('risKInstalarSelaColarColunaLado2','probabilidade_incendio_explosao');
+		$f->insertGoupSafetyRisk('risKInstalarSelaColarColunaLado2','animais_peconhentos');	
+
+		$shortId = $f->insertShortConsequence('risKInstalarSelaColarColunaLado2',0);
+		$sanctionId = $f->insertSanction($shortId,$longId);
+		$f->insertConditionSanction('fixar-carretilha-corda-fibra-sintetica-ponta-bastao',$sanctionId);			
+
+		$longId = $f->insertChangeGoal('tencionar-corda-estopo',50);
+		$f->insertChangeGoalLongExist('retirar-isolador-antigo',50,$longId);	
+
+		$riskName = "riskGirarSelaErguerBastao";
+		$f->insertRisk($riskName);
+		$f->insertGoupSafetyRisk($riskName,'risco_ergonimico');
+		$f->insertGoupSafetyRisk($riskName,'radiacao_nao_ionizante');
+		$f->insertGoupSafetyRisk($riskName,'eletricidade');
+		$f->insertGoupSafetyRisk($riskName,'probabilidade_incendio_explosao');
+		$f->insertGoupSafetyRisk($riskName,'animais_peconhentos');	
+
+		$shortId = $f->insertShortConsequence('risKInstalarSelaColarColunaLado2',0);
+		$sanctionId = $f->insertSanction($shortId,$longId);
+		$f->insertConditionSanction('girar-sela-erguer-bastao',$sanctionId);					
+
+
+		$longId = $f->insertChangeGoal('conectar-corda-estopo',50);
+		$f->insertChangeGoalLongExist('tencionar-corda-estopo',0,$longId);	
+		$f->insertChangeGoalLongExist('tirar-parafusos-baixo-isolador-chave-catraca',0,$longId);	
+		$f->insertChangeGoalLongExist('passar-corda-base-isolador-chave-catraca',0,$longId);	
+		$f->insertChangeGoalLongExist('corda-erguer-isolador',0,$longId);	
+		$f->insertChangeGoalLongExist('retirar-isolador-antigo',0,$longId);	
+		$f->insertChangeGoalLongExist('suspender-isolador',0,$longId);	
+		$f->insertChangeGoalLongExist('icar-isolador',0,$longId);	
+		$f->insertChangeGoalLongExist('parafusar-isolador-coluna-chave-catraca',0,$longId);	
+
+
+		$riskName = "riskEnforcarEstopoAltoIsolador01";
+		$f->insertRisk($riskName);
+		$f->insertGoupSafetyRisk($riskName,'risco_ergonimico');
+		$f->insertGoupSafetyRisk($riskName,'radiacao_nao_ionizante');
+		$f->insertGoupSafetyRisk($riskName,'probabilidade_incendio_explosao');
+		$f->insertGoupSafetyRisk($riskName,'animais_peconhentos');	
+
+		$shortId = $f->insertShortConsequence('risKInstalarSelaColarColunaLado2',50);
+		$sanctionId = $f->insertSanction($shortId,$longId);
+		$f->insertConditionSanction('enforcar-estopo-alto-isolador',$sanctionId);
+	
+
+		$riskName = "riskEnforcarEstopoAltoIsolador02";
+		$f->insertRisk($riskName);
+		$f->insertGoupSafetyRisk($riskName,'eletricidade');
+		$shortId = $f->insertShortConsequence('riskEnforcarEstopoAltoIsolador02',100);
+		
+		$sanctionId = $f->insertSanction($shortId,$longId);
+
+*/
+		
 	}
 }
