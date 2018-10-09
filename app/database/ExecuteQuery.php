@@ -521,7 +521,7 @@ class ExecuteQuery
 			"instalar-sela-colar-coluna-lado-2",
 			"fixar-bastao-garra-invertido-lado-2",
 			"fixar-carretilha-corda-fibra-sintetica-ponta-bastao",
-			"girar-sela-erguer-bastao",
+			"girar-sela-erguer-bastao",analize_preliminar_risco
 			"enforcar-estopo-alto-isolador",
 			"conectar-corda-estop",
 			"operacao-isolador-pedestal",
@@ -984,7 +984,7 @@ class ExecuteQuery
 		$f->insertChangeGoalLongExist('girar-sela-erguer-bastao',0,$longId);
 		$f->insertChangeGoalLongExist('retirar-isolador-antigo',0,$longId);
 		$f->insertChangeGoalLongExist('icar-isolador',0,$longId);
-		
+		f
 		
 		$f->insertRisk('risKInstalarSelaColarColunaLado2');
 		$f->insertGoupSafetyRisk('risKInstalarSelaColarColunaLado2','risco_ergonimico');
@@ -1075,8 +1075,8 @@ class ExecuteQuery
 		$shortId = $f->insertShortConsequence('riskEnforcarEstopoAltoIsolador02',100);
 		
 		$sanctionId = $f->insertSanction($shortId,$longId);
-
 */
+
 		
 	}
 }
