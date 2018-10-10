@@ -1,29 +1,30 @@
-4perimission(ROLE,MISSION):-obligation(ROLE,MISSION).
+permission(ROLE,MISSION):-obligation(ROLE,MISSION).
 isClass(MISSION):-obligation(ROLE,MISSION).
-
 hasMission(GOAL,MISSION):-hasNameConditionMission(MISSION,NAME),hasName(CONDITION,NAME),hasCondition(GOAL,CONDITION).
-
-
-hasTool(ROLE,ARTEFACTA,GOAL,NAME):- perimission(ROLE,MISSION),hasMission(GOAL,MISSION),hasCondition(GOAL,CONDITION),hasRelationArtefact(ARTEFACTA,ARTEFACTB,RELATION),hasConditionRel(NAME,RELATION),isInstanceOf(ARTEFACTA,tool),hasName(CONDITION,NAME).
-hasTool(ROLE,ARTEFACTB,GOAL,NAME):- perimission(ROLE,MISSION),hasMission(GOAL,MISSION),hasCondition(GOAL,CONDITION),hasRelationArtefact(ARTEFACTA,ARTEFACTB,RELATION),hasConditionRel(NAME,RELATION),isInstanceOf(ARTEFACTB,tool).
-
-inGoal(ROLE,GOAL) :- obligation(ROLE,MISSION),hasMission(GOAL,MISSION),hasCondition(GOAL,CONDITION),hasRelationArtefact(ARTEFACTA,ARTEFACTB,RELATION),hasConditionRel(NAME,RELATION),hasName(CONDITION,NAME),isInstanceOf(ARTEFACTA,tool).
-
-
+hasTool(ROLE,ARTEFACTA,GOAL,NAME):- permission(ROLE,MISSION),hasMission(GOAL,MISSION),hasCondition(GOAL,CONDITION),hasRelationArtefact(ARTEFACTA,ARTEFACTB,RELATION),hasConditionRel(NAME,RELATION),isInstanceOf(ARTEFACTA,tool),hasName(CONDITION,NAME).
+hasTool(ROLE,ARTEFACTB,GOAL,NAME):- permission(ROLE,MISSION),hasMission(GOAL,MISSION),hasCondition(GOAL,CONDITION),hasRelationArtefact(ARTEFACTA,ARTEFACTB,RELATION),hasConditionRel(NAME,RELATION),isInstanceOf(ARTEFACTB,tool).
+permissionGoal(ROLE,GOAL) :- hasMission(GOAL,MISSION),permission(ROLE,MISSION).
+obligationGoal(ROLE,GOAL) :- hasMission(GOAL,MISSION),obligation(ROLE,MISSION).
 existConditionSanction(NAME,SANCTION):- hasSanction(GOAL,SANCTION),hasCondition(GOAL,CONDITION),hasName(CONDITION,NAME).
-
-
+hasSanction(GOAL,SANCTION):-relationCondition(NAME,SANCTION),hasName(CONDITION,NAME),hasCondition(GOAL,CONDITION).
 existGoalWithNewProbability(GOAL,NEWPROBABILITY):-hasChangeGoal(LONG,NAME,NEWPROBABILITY),hasName(CONDITION,NAME),hasCondition(GOAL,CONDITION).
 hasSanction(GOAL,SANCTION):-relationCondition(NAME,SANCTION),hasCondition(GOAL,CONDITION),hasName(CONDITION,NAME).
 hasShortConsequence(SANCTION,SHORT):-thisShortConsequenceStopAllGoal(SHORT).
-
+agentHasObligation(AGENT,GOAL):-allocation(AGENT,ROLE),obligationGoal(ROLE,GOAL).
+thisSanctionIsThisAgent(SANCTION,AGENT):-hasSanction(GOAL,SANCTION),agentHasObligation(AGENT,GOAL).
+badSituationHappens(AGENT,SHORT):-thisSanctionIsThisAgent(SANCTION,AGENT),hasShortConsequence(SANCTION,SHORT).
+badSituationHappens(AGENT,LONG):-thisSanctionIsThisAgent(SANCTION,AGENT),hasLongConsequence(SANCTION,LONG).
+errorAgentImpliesOtherCondtion(AGENT,NAME,NEWPROBABILITY,GOALWHENHAPPENSANCTION,SANCTION):-hasChangeGoal(LONG,NAME,NEWPROBABILITY),badSituationHappens(AGENT,LONG),thisSanctionIsThisAgent(SANCTION,AGENT),hasSanction(GOALWHENHAPPENSANCTION,SANCTION).
+errorAgentImplieRisks(AGENT,RISKTYPE,GOALWHENHAPPENSANCTION,SANCTION,FATALITY):-riskIsAssociateWith(SHORT,RISKTYPE,FATALITY),badSituationHappens(AGENT,SHORT),thisSanctionIsThisAgent(SANCTION,AGENT),hasSanction(GOALWHENHAPPENSANCTION,SANCTION).
+generateBadSituation(GOAL,TRIGGER):-hasTrigger(SANCTION,TRIGGER),hasSanction(GOAL,SANCTION).
+generateBadSituation(GOAL,TRIGGER):-hasTriggerThatIsNotSanction(SANCTION,TRIGGER),hasSanction(GOAL,SANCTION).
+planRelation(PLAN,GOALSUPER,GOALSUB,TYPE):-hasType(PLAN,TYPE),hasPlanSuper(GOALSUB,PLAN),hasSuperGoal(PLAN,GOALSUPER).
+goalSequence(GOAL,PLAN):-hasPlanSuper(GOAL,PLAN),hasType(PLAN,sequence).
+goalParallel(GOAL,PLAN):-hasPlanSuper(GOAL,PLAN),hasType(PLAN,parallel).
+linkRole(ROLES,ROLED,com):-linkRole(ROLES,ROLED,auth).
+linkRole(ROLES,ROLED,acq):-linkRole(ROLES,ROLED,com).
 
 isClass(CLASS):-isInstanceOf(CLASS,INSTANCE). 
-exist(RELATION):-hasRelationArtefact(ARTEFACTA,ARTEFACTB,RELATION).
-isClass(RELATION):-exist(RELATION).
-isRelationArtefactArtefact(ARTEFACTA,ARTEFACTB):-hasRelationArtefact(ARTEFACT0A,ARTEFACT0B,RELATION).
-
-
 
 
 isClass(agent).
@@ -202,9 +203,7 @@ isInstanceOf(objetivo-final,condition).
 isInstanceOf(etapas-metodologicas,condition).
 isInstanceOf(metodo-finalizado,condition).
 
-isInstanceOf(supervisores,group).
-isInstanceOf(observadores,group).
-isInstanceOf(executores,group).
+
 
 
 isInstanceOf(plan1,plan).
@@ -286,6 +285,99 @@ isInstanceOf(executor05,role).
 isInstanceOf(executor06,role).
 isInstanceOf(executor07,role).
 
+isInstanceOf(supervisores,group).
+isInstanceOf(observadores,group).
+isInstanceOf(executores,group).
+
+memberOfGroup(supervisor,supervisores).
+memberOfGroup(observador,observadores).
+memberOfGroup(executor01,executores).
+memberOfGroup(executor02,executores).
+memberOfGroup(executor03,executores).
+memberOfGroup(executor04,executores).
+memberOfGroup(executor05,executores).
+memberOfGroup(executor06,executores).
+memberOfGroup(executor07,executores).
+
+linkRole(supervisor,executor01,auth).
+linkRole(supervisor,executor02,auth).
+linkRole(supervisor,executor03,auth).
+linkRole(supervisor,executor04,auth).
+linkRole(supervisor,executor05,auth).
+linkRole(supervisor,executor06,auth).
+linkRole(supervisor,executor07,auth).
+
+linkRole(observador,executor01,acq).
+linkRole(observador,executor02,acq).
+linkRole(observador,executor03,acq).
+linkRole(observador,executor04,acq).
+linkRole(observador,executor05,acq).
+linkRole(observador,executor06,acq).
+linkRole(observador,executor07,acq).
+
+linkRole(executor01,executor01,com).
+linkRole(executor01,executor02,com).
+linkRole(executor01,executor03,com).
+linkRole(executor01,executor04,com).
+linkRole(executor01,executor05,com).
+linkRole(executor01,executor06,com).
+linkRole(executor01,executor07,com).
+
+linkRole(executor02,executor01,com).
+linkRole(executor02,executor02,com).
+linkRole(executor02,executor03,com).
+linkRole(executor02,executor04,com).
+linkRole(executor02,executor05,com).
+linkRole(executor02,executor06,com).
+linkRole(executor02,executor07,com).
+
+linkRole(executor03,executor01,com).
+linkRole(executor03,executor02,com).
+linkRole(executor03,executor03,com).
+linkRole(executor03,executor04,com).
+linkRole(executor03,executor05,com).
+linkRole(executor03,executor06,com).
+linkRole(executor03,executor07,com).
+
+linkRole(executor04,executor01,com).
+linkRole(executor04,executor02,com).
+linkRole(executor04,executor03,com).
+linkRole(executor04,executor04,com).
+linkRole(executor04,executor05,com).
+linkRole(executor04,executor06,com).
+linkRole(executor04,executor07,com).
+
+linkRole(executor05,executor01,com).
+linkRole(executor05,executor02,com).
+linkRole(executor05,executor03,com).
+linkRole(executor05,executor04,com).
+linkRole(executor05,executor05,com).
+linkRole(executor05,executor06,com).
+linkRole(executor05,executor07,com).
+
+linkRole(executor06,executor01,com).
+linkRole(executor06,executor02,com).
+linkRole(executor06,executor03,com).
+linkRole(executor06,executor04,com).
+linkRole(executor06,executor05,com).
+linkRole(executor06,executor06,com).
+linkRole(executor06,executor07,com).
+
+linkRole(executor07,executor01,com).
+linkRole(executor07,executor02,com).
+linkRole(executor07,executor03,com).
+linkRole(executor07,executor04,com).
+linkRole(executor07,executor05,com).
+linkRole(executor07,executor06,com).
+linkRole(executor07,executor07,com).
+
+
+
+
+
+
+
+
 isInstanceOf(goal1,goal).
 isInstanceOf(goal2,goal).
 isInstanceOf(goal3,goal).
@@ -339,57 +431,57 @@ isInstanceOf(goal50,goal).
 isInstanceOf(goal51,goal).
 
 
-hasProbabilitiy(goal1,95).
-hasProbabilitiy(goal2,95).
-hasProbabilitiy(goal3,95).
-hasProbabilitiy(goal4,95).
-hasProbabilitiy(goal5,95).
-hasProbabilitiy(goal6,95).
-hasProbabilitiy(goal7,95).
-hasProbabilitiy(goal8,95).
-hasProbabilitiy(goal9,95).
-hasProbabilitiy(goal10,95).
-hasProbabilitiy(goal11,95).
-hasProbabilitiy(goal12,95).
-hasProbabilitiy(goal13,95).
-hasProbabilitiy(goal14,95).
-hasProbabilitiy(goal15,95).
-hasProbabilitiy(goal16,95).
-hasProbabilitiy(goal17,95).
-hasProbabilitiy(goal18,95).
-hasProbabilitiy(goal19,95).
-hasProbabilitiy(goal20,95).
-hasProbabilitiy(goal21,95).
-hasProbabilitiy(goal22,95).
-hasProbabilitiy(goal23,95).
-hasProbabilitiy(goal24,95).
-hasProbabilitiy(goal25,95).
-hasProbabilitiy(goal26,95).
-hasProbabilitiy(goal27,95).
-hasProbabilitiy(goal28,95).
-hasProbabilitiy(goal29,95).
-hasProbabilitiy(goal30,95).
-hasProbabilitiy(goal31,95).
-hasProbabilitiy(goal32,95).
-hasProbabilitiy(goal33,95).
-hasProbabilitiy(goal34,95).
-hasProbabilitiy(goal35,95).
-hasProbabilitiy(goal36,95).
-hasProbabilitiy(goal37,95).
-hasProbabilitiy(goal38,95).
-hasProbabilitiy(goal39,95).
-hasProbabilitiy(goal40,95).
-hasProbabilitiy(goal41,95).
-hasProbabilitiy(goal42,95).
-hasProbabilitiy(goal43,95).
-hasProbabilitiy(goal44,95).
-hasProbabilitiy(goal45,95).
-hasProbabilitiy(goal46,95).
-hasProbabilitiy(goal47,95).
-hasProbabilitiy(goal48,95).
-hasProbabilitiy(goal49,95).
-hasProbabilitiy(goal50,95).
-hasProbabilitiy(goal51,95).
+hasProbability(goal1,95).
+hasProbability(goal2,95).
+hasProbability(goal3,95).
+hasProbability(goal4,95).
+hasProbability(goal5,95).
+hasProbability(goal6,95).
+hasProbability(goal7,95).
+hasProbability(goal8,95).
+hasProbability(goal9,95).
+hasProbability(goal10,95).
+hasProbability(goal11,95).
+hasProbability(goal12,95).
+hasProbability(goal13,95).
+hasProbability(goal14,95).
+hasProbability(goal15,95).
+hasProbability(goal16,95).
+hasProbability(goal17,95).
+hasProbability(goal18,95).
+hasProbability(goal19,95).
+hasProbability(goal20,95).
+hasProbability(goal21,95).
+hasProbability(goal22,95).
+hasProbability(goal23,95).
+hasProbability(goal24,95).
+hasProbability(goal25,95).
+hasProbability(goal26,95).
+hasProbability(goal27,95).
+hasProbability(goal28,95).
+hasProbability(goal29,95).
+hasProbability(goal30,95).
+hasProbability(goal31,95).
+hasProbability(goal32,95).
+hasProbability(goal33,95).
+hasProbability(goal34,95).
+hasProbability(goal35,95).
+hasProbability(goal36,95).
+hasProbability(goal37,95).
+hasProbability(goal38,95).
+hasProbability(goal39,95).
+hasProbability(goal40,95).
+hasProbability(goal41,95).
+hasProbability(goal42,95).
+hasProbability(goal43,95).
+hasProbability(goal44,95).
+hasProbability(goal45,95).
+hasProbability(goal46,95).
+hasProbability(goal47,95).
+hasProbability(goal48,95).
+hasProbability(goal49,95).
+hasProbability(goal50,95).
+hasProbability(goal51,95).
 
 
 isInstanceOf(condition1,condition).
@@ -814,7 +906,6 @@ hasPlanSuper(goal6,plan7).
 hasPlanSuper(goal7,plan8).
 hasPlanSuper(goal8,plan5).
 hasPlanSuper(goal9,plan1).
-hasPlanSuper(goal10,plan3).
 hasPlanSuper(goal12,plan3).
 hasPlanSuper(goal13,plan3).
 hasPlanSuper(goal14,plan3).
@@ -1048,10 +1139,11 @@ hasChangeGoal(long10,suspender-isolador,30).
 hasChangeGoal(long10,icar-isolador,30).
 hasChangeGoal(long10,girar-sela-erguer-bastao,34).
 hasLongConsequence(sanction10,long10).
-hasTrigger(sanction09,sanction41).
+hasTrigger(sanction10,sanction09).
 hasTrigger(sanction10,sanction41).
 hasTrigger(sanction10,sanction42).
 hasTriggerThatIsNotSanction(sanction10,equipamento-ausente).
+
 
 relationCondition(fixar-carretilha-corda-bastao-universal,sanction11).
 hasChangeGoal(long11,fixar-bastao-garra-lado-1-condutor,50).
@@ -1074,6 +1166,10 @@ riskIsAssociateWith(short30,radiacao_nao_ionizante).
 riskIsAssociateWith(short30,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short30,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short30,eletricidade,fatalidade_elevada).
+hasTrigger(sanction11,sanction10).
+hasTrigger(sanction11,sanction41).
+hasTrigger(sanction11,sanction42).
+hasTriggerThatIsNotSanction(sanction11,equipamento-ausente).
 
 
 
@@ -1100,6 +1196,11 @@ riskIsAssociateWith(short31,radiacao_nao_ionizante).
 riskIsAssociateWith(short31,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short31,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short31,eletricidade,fatalidade_elevada).
+hasTrigger(sanction12,sanction11).
+hasTrigger(sanction12,sanction41).
+hasTrigger(sanction12,sanction42).
+hasTriggerThatIsNotSanction(sanction12,equipamento-ausente).
+
 
 
 relationCondition(fixar-bastao-garra-colar-sela,sanction13).
@@ -1111,6 +1212,11 @@ riskIsAssociateWith(short02,radiacao_nao_ionizante).
 riskIsAssociateWith(short02,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short02,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short02,eletricidade,fatalidade_elevada).
+hasTrigger(sanction13,sanction12).
+hasTrigger(sanction13,sanction41).
+hasTrigger(sanction13,sanction42).
+hasTriggerThatIsNotSanction(sanction13,equipamento-ausente).
+
 
 
 relationCondition(instalar-sela-colar-coluna-lado-2,sanction14).
@@ -1122,6 +1228,10 @@ riskIsAssociateWith(short03,radiacao_nao_ionizante).
 riskIsAssociateWith(short03,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short03,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short03,eletricidade,fatalidade_elevada).
+hasTrigger(sanction14,sanction13).
+hasTrigger(sanction14,sanction41).
+hasTrigger(sanction14,sanction42).
+hasTriggerThatIsNotSanction(sanction14,equipamento-ausente).
 
 
 relationCondition(fixar-bastao-garra-invertido-lado-2,sanction15).
@@ -1133,6 +1243,9 @@ riskIsAssociateWith(short04,radiacao_nao_ionizante).
 riskIsAssociateWith(short04,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short04,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short04,eletricidade,fatalidade_elevada).
+hasTrigger(sanction15,sanction41).
+hasTrigger(sanction15,sanction42).
+hasTriggerThatIsNotSanction(sanction15,equipamento-ausente).
 
 
 relationCondition(fixar-carretilha-corda-fibra-sintetica-ponta-bastao,sanction16).
@@ -1144,6 +1257,9 @@ riskIsAssociateWith(short05,radiacao_nao_ionizante).
 riskIsAssociateWith(short05,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short05,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short05,eletricidade,fatalidade_elevada).
+hasTrigger(sanction16,sanction41).
+hasTrigger(sanction16,sanction42).
+hasTriggerThatIsNotSanction(sanction16,equipamento-ausente).
 
 
 
@@ -1156,6 +1272,9 @@ riskIsAssociateWith(short06,radiacao_nao_ionizante).
 riskIsAssociateWith(short06,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short06,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short06,eletricidade,fatalidade_elevada).
+hasTrigger(sanction17,sanction41).
+hasTrigger(sanction17,sanction42).
+hasTriggerThatIsNotSanction(sanction17,equipamento-ausente).
 
 
 relationCondition(enforcar-estopo-alto-isolador,sanction18).
@@ -1167,6 +1286,9 @@ riskIsAssociateWith(short07,radiacao_nao_ionizante).
 riskIsAssociateWith(short07,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short07,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short07,eletricidade,fatalidade_elevada).
+hasTrigger(sanction18,sanction41).
+hasTrigger(sanction18,sanction42).
+hasTriggerThatIsNotSanction(sanction18,equipamento-ausente).
 
 
 relationCondition(conectar-corda-estopo,sanction19).
@@ -1178,6 +1300,9 @@ riskIsAssociateWith(short08,radiacao_nao_ionizante).
 riskIsAssociateWith(short08,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short08,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short08,eletricidade,fatalidade_elevada).
+hasTrigger(sanction19,sanction41).
+hasTrigger(sanction19,sanction42).
+hasTriggerThatIsNotSanction(sanction19,equipamento-ausente).
 
 
 relationCondition(operacao-isolador-pedestal,sanction20).
@@ -1189,6 +1314,10 @@ riskIsAssociateWith(short09,radiacao_nao_ionizante).
 riskIsAssociateWith(short09,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short09,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short09,eletricidade,fatalidade_elevada).
+hasTrigger(sanction20,sanction41).
+hasTrigger(sanction20,sanction42).
+hasTriggerThatIsNotSanction(sanction20,equipamento-ausente).
+
 
 relationCondition(bastao-universal-chave-catraca-saltar-parafusos,sanction21).
 thisShortConsequenceStopAllGoal(short10).
@@ -1199,6 +1328,9 @@ riskIsAssociateWith(short10,radiacao_nao_ionizante).
 riskIsAssociateWith(short10,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short10,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short10,eletricidade,fatalidade_elevada).
+hasTrigger(sanction21,sanction41).
+hasTrigger(sanction21,sanction42).
+hasTriggerThatIsNotSanction(sanction21,equipamento-ausente).
 
 
 
@@ -1211,6 +1343,9 @@ riskIsAssociateWith(short11,radiacao_nao_ionizante).
 riskIsAssociateWith(short11,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short11,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short11,eletricidade,fatalidade_elevada).
+hasTrigger(sanction22,sanction41).
+hasTrigger(sanction22,sanction42).
+hasTriggerThatIsNotSanction(sanction22,equipamento-ausente).
 
 
 allGoalHasNewProbabilityMinus(long04,sinalizacao,75).
@@ -1225,6 +1360,9 @@ riskIsAssociateWith(short12,radiacao_nao_ionizante).
 riskIsAssociateWith(short12,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short12,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short12,eletricidade,fatalidade_elevada).
+hasTrigger(sanction23,sanction41).
+hasTrigger(sanction23,sanction42).
+hasTriggerThatIsNotSanction(sanction23,equipamento-ausente).
 
 
 relationCondition(tirar-parafusos-baixo-isolador-chave-catraca,sanction25).
@@ -1236,6 +1374,9 @@ riskIsAssociateWith(short13,radiacao_nao_ionizante).
 riskIsAssociateWith(short13,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short13,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short13,eletricidade,fatalidade_elevada).
+hasTrigger(sanction25,sanction41).
+hasTrigger(sanction25,sanction42).
+hasTriggerThatIsNotSanction(sanction25,equipamento-ausente).
 
 
 relationCondition(passar-corda-base-isolador-chave-catraca,sanction26).
@@ -1247,6 +1388,9 @@ riskIsAssociateWith(short14,radiacao_nao_ionizante).
 riskIsAssociateWith(short14,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short14,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short14,eletricidade,fatalidade_elevada).
+hasTrigger(sanction26,sanction41).
+hasTrigger(sanction26,sanction42).
+hasTriggerThatIsNotSanction(sanction26,equipamento-ausente).
 
 
 relationCondition(corda-erguer-isolador,sanction27).
@@ -1258,6 +1402,9 @@ riskIsAssociateWith(short15,radiacao_nao_ionizante).
 riskIsAssociateWith(short15,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short15,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short15,eletricidade,fatalidade_elevada).
+hasTrigger(sanction27,sanction41).
+hasTrigger(sanction27,sanction42).
+hasTriggerThatIsNotSanction(sanction27,equipamento-ausente).
 
 
 relationCondition(retirar-isolador-antigo,sanction28).
@@ -1269,6 +1416,9 @@ riskIsAssociateWith(short16,radiacao_nao_ionizante).
 riskIsAssociateWith(short16,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short16,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short16,eletricidade,fatalidade_elevada).
+hasTrigger(sanction28,sanction41).
+hasTrigger(sanction28,sanction42).
+hasTriggerThatIsNotSanction(sanction28,equipamento-ausente).
 
 
 relationCondition(estopo-isolador,sanction29).
@@ -1280,6 +1430,9 @@ riskIsAssociateWith(short17,radiacao_nao_ionizante).
 riskIsAssociateWith(short17,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short17,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short17,eletricidade,fatalidade_elevada).
+hasTrigger(sanction29,sanction41).
+hasTrigger(sanction29,sanction42).
+hasTriggerThatIsNotSanction(sanction29,equipamento-ausente).
 
 
 relationCondition(suspender-isolador,sanction30).
@@ -1291,6 +1444,9 @@ riskIsAssociateWith(short18,radiacao_nao_ionizante).
 riskIsAssociateWith(short18,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short18,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short18,eletricidade,fatalidade_elevada).
+hasTrigger(sanction30,sanction41).
+hasTrigger(sanction30,sanction42).
+hasTriggerThatIsNotSanction(sanction30,equipamento-ausente).
 
 
 relationCondition(engate-corda-guia,sanction31).
@@ -1302,6 +1458,9 @@ riskIsAssociateWith(short19,radiacao_nao_ionizante).
 riskIsAssociateWith(short19,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short19,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short19,eletricidade,fatalidade_elevada).
+hasTrigger(sanction31,sanction41).
+hasTrigger(sanction31,sanction42).
+hasTriggerThatIsNotSanction(sanction13,equipamento-ausente).
 
 
 relationCondition(icar-isolador,sanction32).
@@ -1313,6 +1472,9 @@ riskIsAssociateWith(short20,radiacao_nao_ionizante).
 riskIsAssociateWith(short20,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short20,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short20,eletricidade,fatalidade_elevada).
+hasTrigger(sanction32,sanction41).
+hasTrigger(sanction32,sanction42).
+hasTriggerThatIsNotSanction(sanction32,equipamento-ausente).
 
 
 relationCondition(parafusar-isolador-coluna-chave-catraca,sanction33).
@@ -1324,6 +1486,9 @@ riskIsAssociateWith(short21,radiacao_nao_ionizante).
 riskIsAssociateWith(short21,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short21,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short21,eletricidade,fatalidade_elevada).
+hasTrigger(sanction33,sanction41).
+hasTrigger(sanction33,sanction42).
+hasTriggerThatIsNotSanction(sanction33,equipamento-ausente).
 
 
 relationCondition(fechar-conector-bastao-universal,sanction34).
@@ -1335,6 +1500,9 @@ riskIsAssociateWith(short22,radiacao_nao_ionizante).
 riskIsAssociateWith(short22,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short22,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short22,eletricidade,fatalidade_elevada).
+hasTrigger(sanction34,sanction41).
+hasTrigger(sanction34,sanction42).
+hasTriggerThatIsNotSanction(sanction34,equipamento-ausente).
 
 
 relationCondition(desconectar-batao-garra-conector,sanction35).
@@ -1346,6 +1514,9 @@ riskIsAssociateWith(short23,radiacao_nao_ionizante).
 riskIsAssociateWith(short23,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short23,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short23,eletricidade,fatalidade_elevada).
+hasTrigger(sanction35,sanction41).
+hasTrigger(sanction35,sanction42).
+hasTriggerThatIsNotSanction(sanction35,equipamento-ausente).
 
 
 relationCondition(retirar-bastao-garra,sanction36).
@@ -1357,6 +1528,9 @@ riskIsAssociateWith(short24,radiacao_nao_ionizante).
 riskIsAssociateWith(short24,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short24,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short24,eletricidade,fatalidade_elevada).
+hasTrigger(sanction36,sanction41).
+hasTrigger(sanction36,sanction42).
+hasTriggerThatIsNotSanction(sanction36,equipamento-ausente).
 
 
 relationCondition(retirar-sela-colar-bastao-garra-lado-1,sanction37).
@@ -1368,6 +1542,9 @@ riskIsAssociateWith(short25,radiacao_nao_ionizante).
 riskIsAssociateWith(short25,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short25,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short25,eletricidade,fatalidade_elevada).
+hasTrigger(sanction37,sanction41).
+hasTrigger(sanction37,sanction42).
+hasTriggerThatIsNotSanction(sanction37,equipamento-ausente).
 
 
 relationCondition(retirar-estopo-isolador,sanction38).
@@ -1379,6 +1556,9 @@ riskIsAssociateWith(short26,radiacao_nao_ionizante).
 riskIsAssociateWith(short26,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short26,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short26,eletricidade,fatalidade_elevada).
+hasTrigger(sanction38,sanction41).
+hasTrigger(sanction38,sanction42).
+hasTriggerThatIsNotSanction(sanction38,equipamento-ausente).
 
 
 relationCondition(retirar-sela-colar-bastao-garra-lado-2,sanction39).
@@ -1390,6 +1570,9 @@ riskIsAssociateWith(short27,radiacao_nao_ionizante).
 riskIsAssociateWith(short27,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short27,animais_peconhentos,media_fatalidade).
 riskIsAssociateWith(short27,eletricidade,fatalidade_elevada).
+hasTrigger(sanction39,sanction41).
+hasTrigger(sanction39,sanction42).
+hasTriggerThatIsNotSanction(sanction39,equipamento-ausente).
 
 
 relationCondition(recolher-equipamento,sanction40).
@@ -1400,13 +1583,19 @@ riskIsAssociateWith(short28,esforco_fisico_intenso,baixa_fatalidade).
 riskIsAssociateWith(short28,radiacao_nao_ionizante).
 riskIsAssociateWith(short28,risco_ergonimico,baixa_fatalidade).
 riskIsAssociateWith(short28,animais_peconhentos,media_fatalidade).
+hasTrigger(sanction40,sanction41).
+hasTrigger(sanction40,sanction42).
+hasTriggerThatIsNotSanction(sanction40,equipamento-ausente).
 
 
 allGoalHasNewProbabilityMinus(long13,supervisao,50).
 hasLongConsequence(sanction41,long13).
 relationCondition(supervisao,sanction41).
+hasTriggerThatIsNotSanction(sanction40,destatencao).
+hasTriggerThatIsNotSanction(sanction40,falta_de_empenho).
 
 
 allGoalHasNewProbabilityMinus(long14,observacao,50).
 hasLongConsequence(sanction42,long14).
 relationCondition(observacao,sanction42).
+hasTriggerThatIsNotSanction(sanction40,destatencao).
